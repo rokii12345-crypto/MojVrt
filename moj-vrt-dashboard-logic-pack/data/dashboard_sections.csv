@@ -1,0 +1,9 @@
+id,title,subtitle,max_items,display_order,style,visibility,collapse_default,description
+hero,Kaj danes na vrtu?,En kratek odgovor za današnji dan.,1,1,hero,always,no,"Na vrhu strani prikaži en stavek, ki povzame vreme in najpomembnejša opravila."
+today,Danes naredi,Najbolj uporabna opravila za današnji dan.,5,2,primary_cards,always,no,Glavna sekcija. Prikaži največ 5 kartic. Ne prikazuj vseh opravil.
+wait,Raje počakaj,"Stvari, ki jih zaradi vremena ali sezone danes raje ne delaj.",3,3,soft_warning,when_items,no,"Negativna priporočila morajo biti jasna, kratka in nežna, ne alarmistična."
+watch,Spremljaj,Na kaj bodi pozoren v naslednjih dneh.,4,4,notice,when_items,no,"Vremenska, bolezenska ali sezonska opozorila brez pretirane dramatike."
+this_week,Ta teden,"Opravila, ki niso nujna danes, a so smiselna v naslednjih dneh.",6,5,secondary_list,always,yes,Sekundarni seznam. Na mobilnem naj bo zložljiv.
+forecast,Vrtno vreme,"7-dnevni pogled, poenostavljen za vrtnarjenje.",7,6,forecast_strip,always,no,"Prikaži dnevno temperaturo, dež, veter in praktično oznako, ne preveč meteoroloških številk."
+plants,Tvoje rastline,Hiter pregled izbranih rastlin.,8,7,compact_chips,when_user_has_plants,yes,"Rastline naj bodo čipi/kartice, ne velike enciklopedične kartice."
+learn,Zakaj ta priporočila?,"Kratek prikaz podatkov, virov in zanesljivosti.",3,8,explainability,optional,yes,"Razlaga mora biti skrita za detajli, ne na prvem zaslonu."

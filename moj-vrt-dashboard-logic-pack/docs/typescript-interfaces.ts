@@ -1,0 +1,55 @@
+export type DashboardSectionId = "today" | "wait" | "watch" | "this_week" | "forecast" | "plants" | "learn";
+export type Confidence = "low" | "medium" | "high";
+export type VerificationStatus = "preverjeno" | "splošno_sprejeto" | "potrebno_preveriti";
+export type GardenType = "vrt" | "visoka_greda" | "balkon" | "rastlinjak";
+
+export type WeatherRule = {
+  id: string;
+  active: "yes" | "no";
+  section: "today" | "wait" | "watch" | "this_week";
+  condition_logic: "all" | "any";
+  metric_1: string;
+  operator_1: ">" | ">=" | "<" | "<=" | "=" | "between" | "in";
+  value_1: string | number;
+  metric_2?: string;
+  operator_2?: string;
+  value_2?: string | number;
+  unit: string;
+  forecast_day_offset: number;
+  lookback_days: number;
+  severity: "low" | "medium" | "high";
+  title: string;
+  short_message: string;
+  detail: string;
+  recommended_action: string;
+  avoid_action: string;
+  applies_months: string;
+  applies_garden_types: string;
+  applies_task_types: string;
+  plant_group_tags: string;
+  confidence: Confidence;
+  source_ids: string;
+  ui_badge: string;
+  sort_weight: number;
+};
+
+export type RecommendationCard = {
+  id: string;
+  section: DashboardSectionId;
+  title: string;
+  short_reason: string;
+  plant_ids: string[];
+  task_type: string;
+  priority: number;
+  confidence: Confidence;
+  verification_status: VerificationStatus;
+  time_needed: string;
+  difficulty: 1 | 2 | 3 | 4 | 5;
+  weather_rule_ids: string[];
+  source_ids: string[];
+  details: string;
+  recommended_action?: string;
+  avoid_action?: string;
+  show_details_default: boolean;
+  ui_badge?: string;
+};

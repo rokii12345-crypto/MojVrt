@@ -1,0 +1,90 @@
+[
+  {
+    "id": "hero",
+    "title": "Kaj danes na vrtu?",
+    "subtitle": "En kratek odgovor za današnji dan.",
+    "max_items": 1,
+    "display_order": 1,
+    "style": "hero",
+    "visibility": "always",
+    "collapse_default": "no",
+    "description": "Na vrhu strani prikaži en stavek, ki povzame vreme in najpomembnejša opravila."
+  },
+  {
+    "id": "today",
+    "title": "Danes naredi",
+    "subtitle": "Najbolj uporabna opravila za današnji dan.",
+    "max_items": 5,
+    "display_order": 2,
+    "style": "primary_cards",
+    "visibility": "always",
+    "collapse_default": "no",
+    "description": "Glavna sekcija. Prikaži največ 5 kartic. Ne prikazuj vseh opravil."
+  },
+  {
+    "id": "wait",
+    "title": "Raje počakaj",
+    "subtitle": "Stvari, ki jih zaradi vremena ali sezone danes raje ne delaj.",
+    "max_items": 3,
+    "display_order": 3,
+    "style": "soft_warning",
+    "visibility": "when_items",
+    "collapse_default": "no",
+    "description": "Negativna priporočila morajo biti jasna, kratka in nežna, ne alarmistična."
+  },
+  {
+    "id": "watch",
+    "title": "Spremljaj",
+    "subtitle": "Na kaj bodi pozoren v naslednjih dneh.",
+    "max_items": 4,
+    "display_order": 4,
+    "style": "notice",
+    "visibility": "when_items",
+    "collapse_default": "no",
+    "description": "Vremenska, bolezenska ali sezonska opozorila brez pretirane dramatike."
+  },
+  {
+    "id": "this_week",
+    "title": "Ta teden",
+    "subtitle": "Opravila, ki niso nujna danes, a so smiselna v naslednjih dneh.",
+    "max_items": 6,
+    "display_order": 5,
+    "style": "secondary_list",
+    "visibility": "always",
+    "collapse_default": "yes",
+    "description": "Sekundarni seznam. Na mobilnem naj bo zložljiv."
+  },
+  {
+    "id": "forecast",
+    "title": "Vrtno vreme",
+    "subtitle": "7-dnevni pogled, poenostavljen za vrtnarjenje.",
+    "max_items": 7,
+    "display_order": 6,
+    "style": "forecast_strip",
+    "visibility": "always",
+    "collapse_default": "no",
+    "description": "Prikaži dnevno temperaturo, dež, veter in praktično oznako, ne preveč meteoroloških številk."
+  },
+  {
+    "id": "plants",
+    "title": "Tvoje rastline",
+    "subtitle": "Hiter pregled izbranih rastlin.",
+    "max_items": 8,
+    "display_order": 7,
+    "style": "compact_chips",
+    "visibility": "when_user_has_plants",
+    "collapse_default": "yes",
+    "description": "Rastline naj bodo čipi/kartice, ne velike enciklopedične kartice."
+  },
+  {
+    "id": "learn",
+    "title": "Zakaj ta priporočila?",
+    "subtitle": "Kratek prikaz podatkov, virov in zanesljivosti.",
+    "max_items": 3,
+    "display_order": 8,
+    "style": "explainability",
+    "visibility": "optional",
+    "collapse_default": "yes",
+    "description": "Razlaga mora biti skrita za detajli, ne na prvem zaslonu."
+  }
+]

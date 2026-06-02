@@ -1,0 +1,74 @@
+[
+  {
+    "id": "balcony_sheltered_rain",
+    "context_type": "garden_type",
+    "context_value": "balkon",
+    "rule": "Dež pogosto ne doseže loncev pod streho.",
+    "effect": "Pri dežju ne predpostavi, da so vsi lonci zaliti.",
+    "priority_hint": "+2 watering if dry and balcony",
+    "ui_hint": "Dodaj vprašanje: Ali je balkon pod streho?"
+  },
+  {
+    "id": "balcony_wind_exposure",
+    "context_type": "garden_type",
+    "context_value": "balkon",
+    "rule": "Balkon je lahko bolj vetroven od vrta.",
+    "effect": "Ob vetru prikaži preverjanje loncev, korit in opor.",
+    "priority_hint": "+2 protection if wind",
+    "ui_hint": "Uporabi mirno opozorilo, ne alarm."
+  },
+  {
+    "id": "raised_bed_drainage",
+    "context_type": "garden_type",
+    "context_value": "visoka_greda",
+    "rule": "Visoka greda se hitreje segreje in izsuši, odvisno od polnila.",
+    "effect": "Ob suhem vremenu prednost zalivanju; ob dežju preveri odtekanje.",
+    "priority_hint": "+2 watering/mulching if dry",
+    "ui_hint": "Prikaži kot praktičen nasvet."
+  },
+  {
+    "id": "greenhouse_heat",
+    "context_type": "garden_type",
+    "context_value": "rastlinjak",
+    "rule": "Rastlinjak ali tunel se lahko pregreje tudi ob zmerni zunanji temperaturi.",
+    "effect": "Pri temperaturi nad 24 °C prikaži prezračevanje.",
+    "priority_hint": "+3 ventilation",
+    "ui_hint": "Vremenska kartica naj omenja notranjo temperaturo kot možnost, ne dejstvo."
+  },
+  {
+    "id": "beginner_limit_tasks",
+    "context_type": "experience",
+    "context_value": "zacetnik",
+    "rule": "Začetnik ne sme dobiti predolgega seznama.",
+    "effect": "Omeji glavne naloge na 3–5 in pokaži gumb Pokaži več.",
+    "priority_hint": "cap today to 5",
+    "ui_hint": "Več praznega prostora, manj teksta."
+  },
+  {
+    "id": "advanced_show_details",
+    "context_type": "experience",
+    "context_value": "napredni",
+    "rule": "Napredni uporabnik lahko vidi več podrobnosti.",
+    "effect": "Dovoli več filtrov in prikaz confidence/source.",
+    "priority_hint": "details expanded optional",
+    "ui_hint": "Naj bo nastavitev, ne privzeto."
+  },
+  {
+    "id": "coastal_region_heat_wind",
+    "context_type": "region",
+    "context_value": "primorska",
+    "rule": "Primorska ima pogosteje toplejše in vetrovne razmere.",
+    "effect": "Priporočila naj bolj poudarijo sušenje loncev, veter in zalivanje.",
+    "priority_hint": "+1 watering/protection",
+    "ui_hint": "Ne spreminjaj datumov brez preverjenih lokalnih podatkov."
+  },
+  {
+    "id": "alpine_region_cold",
+    "context_type": "region",
+    "context_value": "gorenjska",
+    "rule": "Hladnejše lege imajo več tveganja za pozne hladne noči.",
+    "effect": "Pri nizkih temperaturah bolj poudari zaščito sadik.",
+    "priority_hint": "+1 frost/cold warning",
+    "ui_hint": "Uporabi vremensko napoved, ne splošno regijsko predpostavko."
+  }
+]

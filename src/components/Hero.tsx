@@ -21,7 +21,7 @@ export function Hero({ region, weather, weatherError, summary }: Props) {
           <p>{summary.body}</p>
         </div>
         <div className="source-note">
-          Vreme: Open-Meteo Forecast API, referenčna lokacija {region.weatherName}. Nasveti so informativni in niso strokovno jamstvo.
+          Vremenski podatki: Open-Meteo za {region.weatherName}. Priporočila so informativna.
         </div>
       </div>
 

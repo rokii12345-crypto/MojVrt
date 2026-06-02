@@ -1,0 +1,142 @@
+[
+  {
+    "id": "temperature_max",
+    "open_meteo_param": "temperature_2m_max",
+    "request_group": "daily",
+    "unit": "°C",
+    "derived": "no",
+    "description": "Najvišja dnevna temperatura zraka na 2 m.",
+    "used_for": "vročina, presajanje, zalivanje, opozorila",
+    "required_for_mvp": "yes"
+  },
+  {
+    "id": "temperature_min",
+    "open_meteo_param": "temperature_2m_min",
+    "request_group": "daily",
+    "unit": "°C",
+    "derived": "no",
+    "description": "Najnižja dnevna temperatura zraka na 2 m.",
+    "used_for": "pozeba, hladne noči, zaščita sadik",
+    "required_for_mvp": "yes"
+  },
+  {
+    "id": "precipitation_sum",
+    "open_meteo_param": "precipitation_sum",
+    "request_group": "daily",
+    "unit": "mm",
+    "derived": "no",
+    "description": "Skupna dnevna količina padavin.",
+    "used_for": "zalivanje, mokra tla, setev, škropljenje",
+    "required_for_mvp": "yes"
+  },
+  {
+    "id": "precipitation_probability_max",
+    "open_meteo_param": "precipitation_probability_max",
+    "request_group": "daily",
+    "unit": "%",
+    "derived": "no",
+    "description": "Največja dnevna verjetnost padavin.",
+    "used_for": "načrtovanje opravil, čakanje pred dežjem",
+    "required_for_mvp": "yes"
+  },
+  {
+    "id": "wind_speed_max",
+    "open_meteo_param": "wind_speed_10m_max",
+    "request_group": "daily",
+    "unit": "km/h",
+    "derived": "no",
+    "description": "Največja dnevna hitrost vetra na 10 m.",
+    "used_for": "presajanje, zaščita sadik, opore",
+    "required_for_mvp": "yes"
+  },
+  {
+    "id": "wind_gusts_max",
+    "open_meteo_param": "wind_gusts_10m_max",
+    "request_group": "daily",
+    "unit": "km/h",
+    "derived": "no",
+    "description": "Največji dnevni sunki vetra.",
+    "used_for": "opore, lonci, balkon, visoke rastline",
+    "required_for_mvp": "recommended"
+  },
+  {
+    "id": "weather_code",
+    "open_meteo_param": "weather_code",
+    "request_group": "daily",
+    "unit": "code",
+    "derived": "no",
+    "description": "Koda vremenskega stanja po Open-Meteo.",
+    "used_for": "povzetek vremena in ikone",
+    "required_for_mvp": "recommended"
+  },
+  {
+    "id": "uv_index_max",
+    "open_meteo_param": "uv_index_max",
+    "request_group": "daily",
+    "unit": "index",
+    "derived": "no",
+    "description": "Najvišji UV indeks.",
+    "used_for": "opozorilo za delo sredi dneva, občutljive sadike",
+    "required_for_mvp": "optional"
+  },
+  {
+    "id": "et0_fao_evapotranspiration",
+    "open_meteo_param": "et0_fao_evapotranspiration",
+    "request_group": "daily",
+    "unit": "mm",
+    "derived": "no",
+    "description": "Referenčna evapotranspiracija FAO ET0.",
+    "used_for": "naprednejša ocena izsuševanja",
+    "required_for_mvp": "optional"
+  },
+  {
+    "id": "relative_humidity_avg",
+    "open_meteo_param": "relative_humidity_2m",
+    "request_group": "hourly",
+    "unit": "%",
+    "derived": "yes",
+    "description": "Povprečje urne relativne vlage za dan.",
+    "used_for": "tveganje za glivične bolezni, vlažno-toplo vreme",
+    "required_for_mvp": "recommended"
+  },
+  {
+    "id": "soil_temperature_6cm_avg",
+    "open_meteo_param": "soil_temperature_6cm",
+    "request_group": "hourly",
+    "unit": "°C",
+    "derived": "yes",
+    "description": "Povprečna dnevna temperatura tal na približno 6 cm; modelni podatek.",
+    "used_for": "setev na prosto, opozorila za hladna tla",
+    "required_for_mvp": "optional"
+  },
+  {
+    "id": "precipitation_3d",
+    "open_meteo_param": "precipitation_sum",
+    "request_group": "derived_daily_window",
+    "unit": "mm",
+    "derived": "yes",
+    "description": "Vsota padavin v zadnjih/tekočih 3 dneh glede na razpoložljive podatke.",
+    "used_for": "suša, mokra tla, zalivanje",
+    "required_for_mvp": "yes"
+  },
+  {
+    "id": "precipitation_7d",
+    "open_meteo_param": "precipitation_sum",
+    "request_group": "derived_daily_window",
+    "unit": "mm",
+    "derived": "yes",
+    "description": "Vsota padavin v 7-dnevnem oknu.",
+    "used_for": "sušno obdobje, zastirka, tedensko zalivanje",
+    "required_for_mvp": "recommended"
+  },
+  {
+    "id": "hot_days_3d",
+    "open_meteo_param": "temperature_2m_max",
+    "request_group": "derived_daily_window",
+    "unit": "days",
+    "derived": "yes",
+    "description": "Število dni v 3-dnevnem oknu z najvišjo temperaturo nad pragom.",
+    "used_for": "vročinski val, zalivanje, senca",
+    "required_for_mvp": "recommended"
+  }
+]

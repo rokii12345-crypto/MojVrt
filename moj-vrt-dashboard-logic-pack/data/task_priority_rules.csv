@@ -1,0 +1,17 @@
+id,stage,condition,priority_change,section_change,reason,implementation_note
+selected_plant_boost,scoring,task.plant_id is in user.selected_plant_ids,+4,none,Opravila za uporabnikove rastline imajo prednost pred splošnimi opravili.,"Če opravilo nima plant_id, naj dobi manjšo splošno vrednost."
+current_month_boost,scoring,task.month equals current_month,+5,none,Trenutni mesec je osnovni filter koledarja.,"Naloge zunaj meseca naj se praviloma ne prikazujejo, razen vremenskih opozoril."
+weather_rule_boost,scoring,weather_rule matched,+4,weather_rule.section,Vremenski kontekst je glavna dodana vrednost dashboarda.,"Weather rule lahko premakne task v today, wait ali watch."
+high_severity_boost,scoring,severity == high,+5,none,"Pozeba, nevihta, močan veter in velika vročina imajo prednost.",High severity naj lahko preglasi običajni vrstni red.
+beginner_friendly_boost,scoring,task.difficulty <= 2 and user.experience == zacetnik,+2,none,Produkt je namenjen začetnikom; lažja opravila naj bodo vidnejša.,Težja opravila naj imajo gumb za podrobnosti ali opozorilo.
+garden_type_match_boost,scoring,task.applies_garden_types contains user.garden_type,+2,none,"Opravila za balkon, visoko gredo ali vrt morajo biti relevantna.","Če ni polja applies_garden_types, predpostavi all."
+balcony_watering_boost,scoring,user.garden_type == balkon and task.task_type == watering and temp/dry rule matched,+3,today,Lonci in korita se hitreje izsušijo.,Upoštevaj le ob toplem ali suhem vremenu.
+raised_bed_watering_boost,scoring,user.garden_type == visoka_greda and dry rule matched,+2,today,Visoke grede se hitreje sušijo kot klasične grede.,"Ne prikazuj, če je napovedan močan dež."
+low_confidence_penalty,scoring,confidence == low,-4,none,Manj zanesljivi podatki naj ne bodo glavni nasvet.,"Prikaži lahko v razlagi ali nižje, z oznako potrebno preveriti."
+verified_data_boost,scoring,verification_status == preverjeno,+1,none,Preverjeni podatki naj imajo prednost.,Ne pretiravaj; pomembnost je še vedno odvisna od sezone/vremena.
+duplicate_task_merge,deduplication,same plant_id + task_type + same section,merge,none,Ne prikazuj podvojenih nalog.,Združi razloge v eno kartico in izberi najkrajši naslov.
+max_today_items,layout,section == today,cap_to_5,overflow_to_this_week,Preglednost je pomembnejša od popolnosti.,Danes naredi naj ima največ 5 kartic.
+max_wait_items,layout,section == wait,cap_to_3,overflow_hidden,Preveč opozoril deluje stresno.,Prikaži samo najpomembnejše.
+no_plants_selected_empty_state,layout,user.selected_plant_ids is empty,use_starter_profile_prompt,onboarding,Brez izbire rastlin dashboard ne sme biti prazen ali kaotičen.,Prikaži 4 starter profile.
+quiet_ui_rule,layout,always,hide_low_priority_details,details_toggle,"Stran mora biti miren dnevni planer, ne podatkovna tabela.","Podrobnosti, viri in confidence naj bodo vidni na klik."
+emergency_safety_override,layout,storm/frost/high_wind high severity matched,pin_to_top,wait_or_watch,Varnost in zaščita rastlin imata prednost.,Takšno opozorilo je lahko nad navadnimi opravili.

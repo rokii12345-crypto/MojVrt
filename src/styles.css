@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #21351f;
-  background: #f4f8ed;
+  background: #f7f4e8;
   line-height: 1.5;
   font-weight: 400;
   --green-950: #1f351d;
@@ -10,7 +10,7 @@
   --green-500: #7ca45b;
   --green-200: #dceccd;
   --green-100: #edf6e5;
-  --cream: #fbfaf2;
+  --cream: #fffaf0;
   --clay: #b9835a;
   --shadow: 0 24px 80px rgba(35, 65, 31, 0.12);
   --soft-shadow: 0 14px 40px rgba(35, 65, 31, 0.08);
@@ -24,7 +24,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(180deg, #f3f8ed 0%, #fbfaf2 100%);
+  background: linear-gradient(180deg, #f3f7ec 0%, #fffaf0 48%, #f8f5e8 100%);
 }
 
 button,
@@ -38,30 +38,30 @@ button {
 }
 
 .app-shell {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1100px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 28px 0 40px;
+  padding: 24px 0 40px;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 18px;
   align-items: stretch;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .hero-copy,
 .weather-card,
 .panel {
   border: 1px solid rgba(79, 119, 45, 0.16);
-  background: rgba(255, 255, 249, 0.92);
+  background: rgba(255, 255, 248, 0.94);
   box-shadow: var(--shadow);
-  border-radius: 18px;
+  border-radius: 20px;
 }
 
 .hero-copy {
-  padding: 42px;
+  padding: 34px;
   position: relative;
   overflow: hidden;
 }
@@ -98,8 +98,8 @@ p {
 h1 {
   max-width: 720px;
   margin-bottom: 16px;
-  font-size: clamp(2.4rem, 6vw, 5rem);
-  line-height: 0.96;
+  font-size: 4.2rem;
+  line-height: 1;
   letter-spacing: 0;
   color: var(--green-950);
 }
@@ -125,7 +125,7 @@ h2 {
 
 .daily-summary strong {
   color: var(--green-950);
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: 1.65rem;
   line-height: 1.15;
 }
 
@@ -154,7 +154,7 @@ h2 {
 .weather-card {
   display: flex;
   gap: 18px;
-  padding: 32px;
+  padding: 26px;
   align-items: center;
 }
 
@@ -202,7 +202,7 @@ h2 {
 
 main {
   display: grid;
-  gap: 24px;
+  gap: 18px;
 }
 
 .layout {
@@ -213,7 +213,7 @@ main {
 }
 
 .panel {
-  padding: 28px;
+  padding: 24px;
 }
 
 .controls-panel {
@@ -297,6 +297,13 @@ select {
   white-space: nowrap;
 }
 
+.ghost-button:hover,
+.primary-button:hover,
+.chip:hover,
+.starter-profile:hover {
+  transform: translateY(-1px);
+}
+
 .primary-button {
   border: 0;
   border-radius: 999px;
@@ -330,19 +337,48 @@ select {
 
 .dashboard-column {
   display: grid;
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
 }
 
 .onboarding-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
   padding: 24px;
   border: 1px solid rgba(79, 119, 45, 0.18);
-  border-radius: 18px;
+  border-radius: 20px;
   background: #fff9e9;
   box-shadow: var(--soft-shadow);
+}
+
+.onboarding-copy {
+  align-self: center;
+}
+
+.starter-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.starter-profile {
+  display: grid;
+  gap: 6px;
+  min-height: 118px;
+  text-align: left;
+  border: 1px solid rgba(79, 119, 45, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--green-950);
+  box-shadow: 0 10px 24px rgba(35, 65, 31, 0.06);
+}
+
+.starter-profile span {
+  color: #5e684f;
+  font-size: 0.92rem;
 }
 
 .onboarding-panel h2 {
@@ -361,8 +397,8 @@ select {
 
 .recommendation {
   border: 1px solid rgba(79, 119, 45, 0.14);
-  border-radius: 16px;
-  padding: 18px;
+  border-radius: 18px;
+  padding: 16px;
   background: white;
   box-shadow: var(--soft-shadow);
 }
@@ -385,6 +421,11 @@ select {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 10px;
+}
+
+.subtle-pill {
+  background: #f7f3df;
+  color: #6b6b34;
 }
 
 .priority.visoka {
@@ -412,12 +453,62 @@ select {
   color: #52624e;
 }
 
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 12px;
+}
+
+.card-meta span {
+  border-radius: 999px;
+  padding: 4px 9px;
+  background: #f6f7ed;
+  color: #61705c;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.recommendation details {
+  border-top: 1px solid rgba(79, 119, 45, 0.12);
+  padding-top: 10px;
+}
+
+.recommendation summary {
+  width: fit-content;
+  color: var(--green-800);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.details-body {
+  display: grid;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.details-body p {
+  margin-bottom: 0;
+}
+
 .recommendation footer {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   color: #788572;
   font-size: 0.82rem;
+}
+
+.show-more-button {
+  justify-self: start;
+  margin-top: 2px;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(0, 0.95fr) minmax(0, 0.8fr);
+  gap: 18px;
+  align-items: start;
 }
 
 .two-column {
@@ -450,7 +541,7 @@ select {
 
 .forecast-grid {
   display: grid;
-  grid-template-columns: repeat(7, minmax(150px, 1fr));
+  grid-template-columns: repeat(7, minmax(128px, 1fr));
   gap: 12px;
   overflow-x: auto;
   padding-bottom: 4px;
@@ -460,10 +551,10 @@ select {
   display: grid;
   gap: 8px;
   align-content: start;
-  min-height: 230px;
+  min-height: 224px;
   border: 1px solid rgba(79, 119, 45, 0.12);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: 18px;
+  padding: 14px;
   background: white;
 }
 
@@ -553,12 +644,19 @@ code {
 @media (max-width: 1000px) {
   .hero,
   .layout,
-  .two-column {
+  .two-column,
+  .dashboard-column,
+  .settings-grid,
+  .onboarding-panel {
     grid-template-columns: 1fr;
   }
 
   .controls-panel {
     position: static;
+  }
+
+  h1 {
+    font-size: 3.2rem;
   }
 
   .forecast-grid {
@@ -568,7 +666,7 @@ code {
 
 @media (max-width: 640px) {
   .app-shell {
-    width: min(100% - 20px, 1180px);
+    width: min(100% - 20px, 1100px);
     padding-top: 10px;
   }
 
@@ -580,7 +678,7 @@ code {
   }
 
   h1 {
-    font-size: 2.35rem;
+    font-size: 2.45rem;
     line-height: 1.02;
   }
 
@@ -601,7 +699,10 @@ code {
   .plant-picker-heading,
   .onboarding-panel {
     align-items: stretch;
-    flex-direction: column;
+  }
+
+  .starter-profile-grid {
+    grid-template-columns: 1fr;
   }
 
   .ghost-button,

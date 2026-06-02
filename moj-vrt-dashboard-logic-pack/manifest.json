@@ -1,0 +1,17 @@
+{
+  "package_name": "moj-vrt-dashboard-logic-pack",
+  "version": "0.1.0",
+  "created_for": "Moj vrt dashboard UX refactor",
+  "summary": "Data and prompts for a calm daily gardening dashboard: task types, weather rules, scoring, UX sections, starter profiles.",
+  "counts": {
+    "task_types": 23,
+    "weather_rules": 26,
+    "weather_variables": 14,
+    "priority_rules": 16,
+    "dashboard_sections": 8,
+    "starter_profiles": 8,
+    "context_rules": 8,
+    "ux_copy": 15,
+    "sources": 5
+  }
+}

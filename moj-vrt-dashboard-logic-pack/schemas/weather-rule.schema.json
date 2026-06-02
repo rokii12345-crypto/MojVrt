@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Moj vrt weather rule",
+  "type": "object",
+  "required": [
+    "id",
+    "active",
+    "section",
+    "metric_1",
+    "operator_1",
+    "value_1",
+    "severity",
+    "title",
+    "short_message",
+    "confidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "active": {
+      "enum": [
+        "yes",
+        "no"
+      ]
+    },
+    "section": {
+      "enum": [
+        "today",
+        "wait",
+        "watch",
+        "this_week"
+      ]
+    },
+    "condition_logic": {
+      "enum": [
+        "all",
+        "any"
+      ]
+    },
+    "metric_1": {
+      "type": "string"
+    },
+    "operator_1": {
+      "enum": [
+        ">",
+        ">=",
+        "<",
+        "<=",
+        "=",
+        "between",
+        "in"
+      ]
+    },
+    "value_1": {
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "metric_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operator_2": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "value_2": {
+      "type": [
+        "string",
+        "number",
+        "null"
+      ]
+    },
+    "unit": {
+      "type": "string"
+    },
+    "forecast_day_offset": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "lookback_days": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "short_message": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "recommended_action": {
+      "type": "string"
+    },
+    "avoid_action": {
+      "type": "string"
+    },
+    "applies_months": {
+      "type": "string"
+    },
+    "applies_garden_types": {
+      "type": "string"
+    },
+    "applies_task_types": {
+      "type": "string"
+    },
+    "plant_group_tags": {
+      "type": "string"
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "source_ids": {
+      "type": "string"
+    },
+    "ui_badge": {
+      "type": "string"
+    },
+    "sort_weight": {
+      "type": [
+        "number",
+        "string"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

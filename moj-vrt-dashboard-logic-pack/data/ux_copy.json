@@ -1,0 +1,77 @@
+[
+  {
+    "key": "hero_default_title",
+    "sl": "Kaj danes na vrtu?",
+    "context": "Naslov na vrhu dashboarda."
+  },
+  {
+    "key": "hero_default_subtitle",
+    "sl": "Izberi svoj vrt in rastline, nato ti pokažemo najpomembnejša opravila za danes.",
+    "context": "Prvi obisk brez nastavitev."
+  },
+  {
+    "key": "empty_no_plants_title",
+    "sl": "Najprej izberi nekaj rastlin",
+    "context": "Prazno stanje brez izbranih rastlin."
+  },
+  {
+    "key": "empty_no_plants_body",
+    "sl": "Za začetek izberi enega od pripravljenih profilov ali dodaj rastline ročno.",
+    "context": "Prazno stanje brez izbranih rastlin."
+  },
+  {
+    "key": "confidence_low_label",
+    "sl": "Potrebno preveriti",
+    "context": "Oznaka za nizko zanesljivost."
+  },
+  {
+    "key": "confidence_medium_label",
+    "sl": "Splošno priporočilo",
+    "context": "Oznaka za srednjo zanesljivost."
+  },
+  {
+    "key": "confidence_high_label",
+    "sl": "Dobro podprto priporočilo",
+    "context": "Oznaka za visoko zanesljivost."
+  },
+  {
+    "key": "show_details",
+    "sl": "Zakaj?",
+    "context": "Gumb za razlago kartice."
+  },
+  {
+    "key": "hide_details",
+    "sl": "Skrij razlago",
+    "context": "Gumb za skrivanje razlage."
+  },
+  {
+    "key": "show_more_tasks",
+    "sl": "Pokaži več opravil",
+    "context": "Gumb za razširitev sekundarnih nalog."
+  },
+  {
+    "key": "weather_attribution",
+    "sl": "Vremenski podatki: Open-Meteo. Priporočila so informativna.",
+    "context": "Atribucija in disclaimer pri vremenu."
+  },
+  {
+    "key": "informational_disclaimer",
+    "sl": "Nasveti so informativni in odvisni od sorte, lege, vremena in stanja tvojega vrta.",
+    "context": "Splošen disclaimer."
+  },
+  {
+    "key": "wait_section_helper",
+    "sl": "To niso prepovedi, ampak previdni predlogi za boljši čas.",
+    "context": "Pojasnilo pri sekciji Raje počakaj."
+  },
+  {
+    "key": "watch_section_helper",
+    "sl": "To so stvari, ki jih je dobro preveriti, ne nujno velika težava.",
+    "context": "Pojasnilo pri sekciji Spremljaj."
+  },
+  {
+    "key": "mobile_summary_hint",
+    "sl": "Začni s tremi najpomembnejšimi karticami. Podrobnosti so nižje.",
+    "context": "Interno navodilo za mobilni UI."
+  }
+]

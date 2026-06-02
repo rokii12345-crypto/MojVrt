@@ -1,5 +1,7 @@
 export type Confidence = "nizka" | "srednja" | "visoka" | string;
 export type UserExperience = "zacetnik" | "nekaj_izkusenj";
+export type DashboardSectionId = "today" | "wait" | "watch" | "this_week" | "forecast" | "plants" | "learn";
+export type VerificationStatus = "preverjeno" | "splošno_sprejeto" | "potrebno_preveriti" | string;
 
 export type Plant = {
   id: string;
@@ -81,20 +83,36 @@ export type WeatherDay = {
   precipitationSum?: number;
   precipitationProbabilityMax?: number;
   windSpeedMax?: number;
+  windGustsMax?: number;
+  humidityAvg?: number;
+  precipitation3d?: number;
+  precipitation7d?: number;
+  hotDays3d?: number;
 };
 
 export type Recommendation = {
   id: string;
+  section?: DashboardSectionId;
   title: string;
   body: string;
+  short_reason?: string;
   type: "do" | "wait" | "watch" | "weather";
   priority: "visoka" | "srednja" | "nizka";
+  score?: number;
+  task_type?: string;
+  time_needed?: string;
+  difficulty?: 1 | 2 | 3 | 4 | 5;
   plantId?: string;
   plantName?: string;
   source?: "calendar" | "weather" | "combined";
   confidence?: Confidence;
-  verification_status?: string;
-  source_ids?: string;
+  verification_status?: VerificationStatus;
+  source_ids?: string | string[];
+  weather_rule_ids?: string[];
+  details?: string;
+  recommended_action?: string;
+  avoid_action?: string;
+  ui_badge?: string;
 };
 
 export type DailySummary = {

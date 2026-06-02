@@ -1,0 +1,15 @@
+id,open_meteo_param,request_group,unit,derived,description,used_for,required_for_mvp
+temperature_max,temperature_2m_max,daily,°C,no,Najvišja dnevna temperatura zraka na 2 m.,"vročina, presajanje, zalivanje, opozorila",yes
+temperature_min,temperature_2m_min,daily,°C,no,Najnižja dnevna temperatura zraka na 2 m.,"pozeba, hladne noči, zaščita sadik",yes
+precipitation_sum,precipitation_sum,daily,mm,no,Skupna dnevna količina padavin.,"zalivanje, mokra tla, setev, škropljenje",yes
+precipitation_probability_max,precipitation_probability_max,daily,%,no,Največja dnevna verjetnost padavin.,"načrtovanje opravil, čakanje pred dežjem",yes
+wind_speed_max,wind_speed_10m_max,daily,km/h,no,Največja dnevna hitrost vetra na 10 m.,"presajanje, zaščita sadik, opore",yes
+wind_gusts_max,wind_gusts_10m_max,daily,km/h,no,Največji dnevni sunki vetra.,"opore, lonci, balkon, visoke rastline",recommended
+weather_code,weather_code,daily,code,no,Koda vremenskega stanja po Open-Meteo.,povzetek vremena in ikone,recommended
+uv_index_max,uv_index_max,daily,index,no,Najvišji UV indeks.,"opozorilo za delo sredi dneva, občutljive sadike",optional
+et0_fao_evapotranspiration,et0_fao_evapotranspiration,daily,mm,no,Referenčna evapotranspiracija FAO ET0.,naprednejša ocena izsuševanja,optional
+relative_humidity_avg,relative_humidity_2m,hourly,%,yes,Povprečje urne relativne vlage za dan.,"tveganje za glivične bolezni, vlažno-toplo vreme",recommended
+soil_temperature_6cm_avg,soil_temperature_6cm,hourly,°C,yes,Povprečna dnevna temperatura tal na približno 6 cm; modelni podatek.,"setev na prosto, opozorila za hladna tla",optional
+precipitation_3d,precipitation_sum,derived_daily_window,mm,yes,Vsota padavin v zadnjih/tekočih 3 dneh glede na razpoložljive podatke.,"suša, mokra tla, zalivanje",yes
+precipitation_7d,precipitation_sum,derived_daily_window,mm,yes,Vsota padavin v 7-dnevnem oknu.,"sušno obdobje, zastirka, tedensko zalivanje",recommended
+hot_days_3d,temperature_2m_max,derived_daily_window,days,yes,Število dni v 3-dnevnem oknu z najvišjo temperaturo nad pragom.,"vročinski val, zalivanje, senca",recommended

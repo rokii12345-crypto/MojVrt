@@ -1,0 +1,146 @@
+[
+  {
+    "id": "selected_plant_boost",
+    "stage": "scoring",
+    "condition": "task.plant_id is in user.selected_plant_ids",
+    "priority_change": "+4",
+    "section_change": "none",
+    "reason": "Opravila za uporabnikove rastline imajo prednost pred splošnimi opravili.",
+    "implementation_note": "Če opravilo nima plant_id, naj dobi manjšo splošno vrednost."
+  },
+  {
+    "id": "current_month_boost",
+    "stage": "scoring",
+    "condition": "task.month equals current_month",
+    "priority_change": "+5",
+    "section_change": "none",
+    "reason": "Trenutni mesec je osnovni filter koledarja.",
+    "implementation_note": "Naloge zunaj meseca naj se praviloma ne prikazujejo, razen vremenskih opozoril."
+  },
+  {
+    "id": "weather_rule_boost",
+    "stage": "scoring",
+    "condition": "weather_rule matched",
+    "priority_change": "+4",
+    "section_change": "weather_rule.section",
+    "reason": "Vremenski kontekst je glavna dodana vrednost dashboarda.",
+    "implementation_note": "Weather rule lahko premakne task v today, wait ali watch."
+  },
+  {
+    "id": "high_severity_boost",
+    "stage": "scoring",
+    "condition": "severity == high",
+    "priority_change": "+5",
+    "section_change": "none",
+    "reason": "Pozeba, nevihta, močan veter in velika vročina imajo prednost.",
+    "implementation_note": "High severity naj lahko preglasi običajni vrstni red."
+  },
+  {
+    "id": "beginner_friendly_boost",
+    "stage": "scoring",
+    "condition": "task.difficulty <= 2 and user.experience == zacetnik",
+    "priority_change": "+2",
+    "section_change": "none",
+    "reason": "Produkt je namenjen začetnikom; lažja opravila naj bodo vidnejša.",
+    "implementation_note": "Težja opravila naj imajo gumb za podrobnosti ali opozorilo."
+  },
+  {
+    "id": "garden_type_match_boost",
+    "stage": "scoring",
+    "condition": "task.applies_garden_types contains user.garden_type",
+    "priority_change": "+2",
+    "section_change": "none",
+    "reason": "Opravila za balkon, visoko gredo ali vrt morajo biti relevantna.",
+    "implementation_note": "Če ni polja applies_garden_types, predpostavi all."
+  },
+  {
+    "id": "balcony_watering_boost",
+    "stage": "scoring",
+    "condition": "user.garden_type == balkon and task.task_type == watering and temp/dry rule matched",
+    "priority_change": "+3",
+    "section_change": "today",
+    "reason": "Lonci in korita se hitreje izsušijo.",
+    "implementation_note": "Upoštevaj le ob toplem ali suhem vremenu."
+  },
+  {
+    "id": "raised_bed_watering_boost",
+    "stage": "scoring",
+    "condition": "user.garden_type == visoka_greda and dry rule matched",
+    "priority_change": "+2",
+    "section_change": "today",
+    "reason": "Visoke grede se hitreje sušijo kot klasične grede.",
+    "implementation_note": "Ne prikazuj, če je napovedan močan dež."
+  },
+  {
+    "id": "low_confidence_penalty",
+    "stage": "scoring",
+    "condition": "confidence == low",
+    "priority_change": "-4",
+    "section_change": "none",
+    "reason": "Manj zanesljivi podatki naj ne bodo glavni nasvet.",
+    "implementation_note": "Prikaži lahko v razlagi ali nižje, z oznako potrebno preveriti."
+  },
+  {
+    "id": "verified_data_boost",
+    "stage": "scoring",
+    "condition": "verification_status == preverjeno",
+    "priority_change": "+1",
+    "section_change": "none",
+    "reason": "Preverjeni podatki naj imajo prednost.",
+    "implementation_note": "Ne pretiravaj; pomembnost je še vedno odvisna od sezone/vremena."
+  },
+  {
+    "id": "duplicate_task_merge",
+    "stage": "deduplication",
+    "condition": "same plant_id + task_type + same section",
+    "priority_change": "merge",
+    "section_change": "none",
+    "reason": "Ne prikazuj podvojenih nalog.",
+    "implementation_note": "Združi razloge v eno kartico in izberi najkrajši naslov."
+  },
+  {
+    "id": "max_today_items",
+    "stage": "layout",
+    "condition": "section == today",
+    "priority_change": "cap_to_5",
+    "section_change": "overflow_to_this_week",
+    "reason": "Preglednost je pomembnejša od popolnosti.",
+    "implementation_note": "Danes naredi naj ima največ 5 kartic."
+  },
+  {
+    "id": "max_wait_items",
+    "stage": "layout",
+    "condition": "section == wait",
+    "priority_change": "cap_to_3",
+    "section_change": "overflow_hidden",
+    "reason": "Preveč opozoril deluje stresno.",
+    "implementation_note": "Prikaži samo najpomembnejše."
+  },
+  {
+    "id": "no_plants_selected_empty_state",
+    "stage": "layout",
+    "condition": "user.selected_plant_ids is empty",
+    "priority_change": "use_starter_profile_prompt",
+    "section_change": "onboarding",
+    "reason": "Brez izbire rastlin dashboard ne sme biti prazen ali kaotičen.",
+    "implementation_note": "Prikaži 4 starter profile."
+  },
+  {
+    "id": "quiet_ui_rule",
+    "stage": "layout",
+    "condition": "always",
+    "priority_change": "hide_low_priority_details",
+    "section_change": "details_toggle",
+    "reason": "Stran mora biti miren dnevni planer, ne podatkovna tabela.",
+    "implementation_note": "Podrobnosti, viri in confidence naj bodo vidni na klik."
+  },
+  {
+    "id": "emergency_safety_override",
+    "stage": "layout",
+    "condition": "storm/frost/high_wind high severity matched",
+    "priority_change": "pin_to_top",
+    "section_change": "wait_or_watch",
+    "reason": "Varnost in zaščita rastlin imata prednost.",
+    "implementation_note": "Takšno opozorilo je lahko nad navadnimi opravili."
+  }
+]

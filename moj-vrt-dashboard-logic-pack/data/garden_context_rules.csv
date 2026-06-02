@@ -1,0 +1,9 @@
+id,context_type,context_value,rule,effect,priority_hint,ui_hint
+balcony_sheltered_rain,garden_type,balkon,Dež pogosto ne doseže loncev pod streho.,"Pri dežju ne predpostavi, da so vsi lonci zaliti.",+2 watering if dry and balcony,Dodaj vprašanje: Ali je balkon pod streho?
+balcony_wind_exposure,garden_type,balkon,Balkon je lahko bolj vetroven od vrta.,"Ob vetru prikaži preverjanje loncev, korit in opor.",+2 protection if wind,"Uporabi mirno opozorilo, ne alarm."
+raised_bed_drainage,garden_type,visoka_greda,"Visoka greda se hitreje segreje in izsuši, odvisno od polnila.",Ob suhem vremenu prednost zalivanju; ob dežju preveri odtekanje.,+2 watering/mulching if dry,Prikaži kot praktičen nasvet.
+greenhouse_heat,garden_type,rastlinjak,Rastlinjak ali tunel se lahko pregreje tudi ob zmerni zunanji temperaturi.,Pri temperaturi nad 24 °C prikaži prezračevanje.,+3 ventilation,"Vremenska kartica naj omenja notranjo temperaturo kot možnost, ne dejstvo."
+beginner_limit_tasks,experience,zacetnik,Začetnik ne sme dobiti predolgega seznama.,Omeji glavne naloge na 3–5 in pokaži gumb Pokaži več.,cap today to 5,"Več praznega prostora, manj teksta."
+advanced_show_details,experience,napredni,Napredni uporabnik lahko vidi več podrobnosti.,Dovoli več filtrov in prikaz confidence/source.,details expanded optional,"Naj bo nastavitev, ne privzeto."
+coastal_region_heat_wind,region,primorska,Primorska ima pogosteje toplejše in vetrovne razmere.,"Priporočila naj bolj poudarijo sušenje loncev, veter in zalivanje.",+1 watering/protection,Ne spreminjaj datumov brez preverjenih lokalnih podatkov.
+alpine_region_cold,region,gorenjska,Hladnejše lege imajo več tveganja za pozne hladne noči.,Pri nizkih temperaturah bolj poudari zaščito sadik.,+1 frost/cold warning,"Uporabi vremensko napoved, ne splošno regijsko predpostavko."

@@ -1,0 +1,16 @@
+key,sl,context
+hero_default_title,Kaj danes na vrtu?,Naslov na vrhu dashboarda.
+hero_default_subtitle,"Izberi svoj vrt in rastline, nato ti pokažemo najpomembnejša opravila za danes.",Prvi obisk brez nastavitev.
+empty_no_plants_title,Najprej izberi nekaj rastlin,Prazno stanje brez izbranih rastlin.
+empty_no_plants_body,Za začetek izberi enega od pripravljenih profilov ali dodaj rastline ročno.,Prazno stanje brez izbranih rastlin.
+confidence_low_label,Potrebno preveriti,Oznaka za nizko zanesljivost.
+confidence_medium_label,Splošno priporočilo,Oznaka za srednjo zanesljivost.
+confidence_high_label,Dobro podprto priporočilo,Oznaka za visoko zanesljivost.
+show_details,Zakaj?,Gumb za razlago kartice.
+hide_details,Skrij razlago,Gumb za skrivanje razlage.
+show_more_tasks,Pokaži več opravil,Gumb za razširitev sekundarnih nalog.
+weather_attribution,Vremenski podatki: Open-Meteo. Priporočila so informativna.,Atribucija in disclaimer pri vremenu.
+informational_disclaimer,"Nasveti so informativni in odvisni od sorte, lege, vremena in stanja tvojega vrta.",Splošen disclaimer.
+wait_section_helper,"To niso prepovedi, ampak previdni predlogi za boljši čas.",Pojasnilo pri sekciji Raje počakaj.
+watch_section_helper,"To so stvari, ki jih je dobro preveriti, ne nujno velika težava.",Pojasnilo pri sekciji Spremljaj.
+mobile_summary_hint,Začni s tremi najpomembnejšimi karticami. Podrobnosti so nižje.,Interno navodilo za mobilni UI.

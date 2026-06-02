@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Moj vrt recommendation card",
+  "type": "object",
+  "required": [
+    "id",
+    "section",
+    "title",
+    "short_reason",
+    "priority",
+    "confidence",
+    "time_needed",
+    "difficulty"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string",
+      "enum": [
+        "today",
+        "wait",
+        "watch",
+        "this_week",
+        "forecast",
+        "plants",
+        "learn"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "short_reason": {
+      "type": "string",
+      "maxLength": 140
+    },
+    "plant_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "confidence": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "preverjeno",
+        "splošno_sprejeto",
+        "potrebno_preveriti"
+      ]
+    },
+    "time_needed": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "weather_rule_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "details": {
+      "type": "string",
+      "maxLength": 800
+    },
+    "recommended_action": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "avoid_action": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "show_details_default": {
+      "type": "boolean"
+    },
+    "ui_badge": {
+      "type": "string",
+      "maxLength": 30
+    }
+  },
+  "additionalProperties": false
+}

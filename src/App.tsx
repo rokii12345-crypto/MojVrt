@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import plantsRaw from "./data/plants.json";
 import tasksRaw from "./data/calendar_tasks.json";
+import starterProfilesRaw from "../moj-vrt-dashboard-logic-pack/data/starter_profiles.json";
 import type { CalendarTask, Plant, UserExperience, WeatherSnapshot } from "./types";
 import { regions, gardenTypes } from "./data/regions";
 import { getCurrentMonthNumber, getMonthName } from "./lib/date";
@@ -12,9 +13,13 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { PlantSummary } from "./components/PlantSummary";
 import { RecommendationList } from "./components/RecommendationList";
+import { StarterProfiles, type StarterProfile } from "./components/StarterProfiles";
 
 const plants = plantsRaw as Plant[];
 const tasks = tasksRaw as CalendarTask[];
+const starterProfiles = (starterProfilesRaw as StarterProfile[])
+  .sort((a, b) => a.onboarding_order - b.onboarding_order)
+  .slice(0, 4);
 const starterPlantIds = ["paradiznik", "solata", "bucke", "korenje", "bazilika", "jagode"];
 const storageKey = "moj-vrt-dashboard-settings";
 
@@ -25,6 +30,8 @@ type SavedSettings = {
   selectedPlantIds: string[];
   highPriorityOnly: boolean;
   experience: UserExperience;
+  selectedStarterProfileId?: string;
+  hasSavedSettings: boolean;
 };
 
 const defaultSettings: SavedSettings = {
@@ -33,7 +40,9 @@ const defaultSettings: SavedSettings = {
   selectedMonth: getCurrentMonthNumber(),
   selectedPlantIds: [],
   highPriorityOnly: false,
-  experience: "zacetnik"
+  experience: "zacetnik",
+  selectedStarterProfileId: undefined,
+  hasSavedSettings: false
 };
 
 function loadSavedSettings(): SavedSettings {
@@ -49,7 +58,9 @@ function loadSavedSettings(): SavedSettings {
       selectedMonth: parsed.selectedMonth ?? defaultSettings.selectedMonth,
       selectedPlantIds: Array.isArray(parsed.selectedPlantIds) ? parsed.selectedPlantIds : defaultSettings.selectedPlantIds,
       highPriorityOnly: parsed.highPriorityOnly ?? defaultSettings.highPriorityOnly,
-      experience: parsed.experience ?? defaultSettings.experience
+      experience: parsed.experience ?? defaultSettings.experience,
+      selectedStarterProfileId: parsed.selectedStarterProfileId,
+      hasSavedSettings: true
     };
   } catch {
     return defaultSettings;
@@ -64,6 +75,8 @@ function App() {
   const [selectedPlantIds, setSelectedPlantIds] = useState<string[]>(savedSettings.selectedPlantIds);
   const [highPriorityOnly, setHighPriorityOnly] = useState(savedSettings.highPriorityOnly);
   const [experience, setExperience] = useState<UserExperience>(savedSettings.experience);
+  const [selectedStarterProfileId, setSelectedStarterProfileId] = useState(savedSettings.selectedStarterProfileId);
+  const [hasSavedSettings, setHasSavedSettings] = useState(savedSettings.hasSavedSettings);
   const [weather, setWeather] = useState<WeatherSnapshot | null>(null);
   const [weatherError, setWeatherError] = useState<string | null>(null);
 
@@ -78,9 +91,11 @@ function App() {
       selectedMonth,
       selectedPlantIds,
       highPriorityOnly,
-      experience
+      experience,
+      selectedStarterProfileId,
+      hasSavedSettings
     }));
-  }, [experience, highPriorityOnly, selectedGardenTypeId, selectedMonth, selectedPlantIds, selectedRegionId]);
+  }, [experience, hasSavedSettings, highPriorityOnly, selectedGardenTypeId, selectedMonth, selectedPlantIds, selectedRegionId, selectedStarterProfileId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -109,7 +124,8 @@ function App() {
         tasks,
         selectedPlantIds,
         gardenType: selectedGardenType,
-        month: selectedMonth
+        month: selectedMonth,
+        experience
       });
 
       const filtered = highPriorityOnly ? recommendations.filter((item) => item.priority === "visoka") : recommendations;
@@ -119,8 +135,8 @@ function App() {
   );
 
   const weatherRecommendations = useMemo(
-    () => getWeatherRecommendations(weather, selectedRegion),
-    [weather, selectedRegion]
+    () => getWeatherRecommendations(weather, selectedRegion, selectedGardenType, selectedMonth),
+    [selectedGardenType, selectedMonth, selectedRegion, weather]
   );
 
   const todayRecommendations = useMemo(
@@ -129,17 +145,22 @@ function App() {
   );
 
   const doRecommendations = useMemo(
-    () => hasSelectedPlants ? todayRecommendations.filter((item) => item.type === "do") : [],
+    () => hasSelectedPlants ? todayRecommendations.filter((item) => item.section === "today") : [],
     [hasSelectedPlants, todayRecommendations]
   );
 
   const waitRecommendations = useMemo(
-    () => todayRecommendations.filter((item) => item.type === "wait"),
+    () => todayRecommendations.filter((item) => item.section === "wait"),
     [todayRecommendations]
   );
 
   const watchRecommendations = useMemo(
-    () => todayRecommendations.filter((item) => item.type === "watch" || item.type === "weather"),
+    () => todayRecommendations.filter((item) => item.section === "watch"),
+    [todayRecommendations]
+  );
+
+  const thisWeekRecommendations = useMemo(
+    () => todayRecommendations.filter((item) => item.section === "this_week").slice(0, 6),
     [todayRecommendations]
   );
 
@@ -162,7 +183,21 @@ function App() {
   }
 
   function selectStarterPlants() {
+    setHasSavedSettings(true);
     setSelectedPlantIds(starterPlantIds);
+  }
+
+  function normalizeProfileGardenType(type: string) {
+    return type === "vrt" ? "klasicni_vrt" : type;
+  }
+
+  function selectStarterProfile(profile: StarterProfile) {
+    setSelectedStarterProfileId(profile.id);
+    setSelectedRegionId(profile.region_id);
+    setSelectedGardenTypeId(normalizeProfileGardenType(profile.garden_type));
+    setExperience(profile.experience as UserExperience);
+    setSelectedPlantIds(profile.plant_ids.split(",").map((id) => id.trim()).filter(Boolean));
+    setHasSavedSettings(true);
   }
 
   return (
@@ -170,7 +205,49 @@ function App() {
       <Hero region={selectedRegion} weather={weather} weatherError={weatherError} summary={dailySummary} />
 
       <main>
-        <div className="layout">
+        {!hasSavedSettings ? <StarterProfiles profiles={starterProfiles} onSelectProfile={selectStarterProfile} /> : null}
+
+        <div className="dashboard-column">
+          <RecommendationList
+            eyebrow="Danes naredi"
+            title="Kaj naj danes naredim?"
+            subtitle={`Za ${selectedRegion.name}, ${selectedGardenType.name.toLowerCase()} in mesec ${getMonthName(selectedMonth)}. Razponi so mesečni, ne točni datumi.`}
+            recommendations={doRecommendations}
+            emptyMessage={hasSelectedPlants ? "Za izbrane rastline danes ni jasnega opravila v tej skupini. Poglej opozorila in 7-dnevni pogled." : "Izberi rastline, da se prikažejo današnja koledarska opravila."}
+            limit={5}
+          />
+
+          <RecommendationList
+            eyebrow="Raje počakaj"
+            title="Opravila z vremenskim tveganjem"
+            subtitle="Sem pridejo opravila, ki jih mraz, veter, vročina ali dež lahko naredijo manj smiselna."
+            recommendations={waitRecommendations}
+            emptyMessage="Trenutno ni večjih razlogov za prestavljanje opravil zaradi vremena."
+            limit={3}
+          />
+
+          <RecommendationList
+            eyebrow="Spremljaj"
+            title="Na kaj bodi pozoren"
+            subtitle="Kratek vremenski opomnik za zalivanje, mokre liste, vročino in opore."
+            recommendations={watchRecommendations}
+            emptyMessage="Vreme ne kaže posebnih dodatnih opozoril. Vseeno preveri zemljo in mikroklimo."
+            limit={4}
+          />
+        </div>
+
+        <ForecastStrip weather={weather} region={selectedRegion} monthlyTasks={calendarRecommendations} />
+
+        <RecommendationList
+          eyebrow="Ta teden"
+          title="Ni nujno danes"
+          subtitle="Opravila iz mesečnega koledarja in vremenskih pravil, ki so smiselna v naslednjih dneh."
+          recommendations={thisWeekRecommendations}
+          emptyMessage="Za ta teden ni dodatnih opravil za izbrano kombinacijo."
+          limit={6}
+        />
+
+        <div className="settings-grid">
           <Controls
             regions={regions}
             gardenTypes={gardenTypes}
@@ -181,68 +258,43 @@ function App() {
             selectedPlantIds={selectedPlantIds}
             highPriorityOnly={highPriorityOnly}
             experience={experience}
-            onRegionChange={setSelectedRegionId}
-            onGardenTypeChange={setSelectedGardenTypeId}
-            onMonthChange={setSelectedMonth}
-            onPlantToggle={togglePlant}
+            onRegionChange={(value) => {
+              setSelectedRegionId(value);
+              setHasSavedSettings(true);
+            }}
+            onGardenTypeChange={(value) => {
+              setSelectedGardenTypeId(value);
+              setHasSavedSettings(true);
+            }}
+            onMonthChange={(value) => {
+              setSelectedMonth(value);
+              setHasSavedSettings(true);
+            }}
+            onPlantToggle={(value) => {
+              togglePlant(value);
+              setHasSavedSettings(true);
+            }}
             onSelectStarterPlants={selectStarterPlants}
-            onHighPriorityOnlyChange={setHighPriorityOnly}
-            onExperienceChange={setExperience}
+            onHighPriorityOnlyChange={(value) => {
+              setHighPriorityOnly(value);
+              setHasSavedSettings(true);
+            }}
+            onExperienceChange={(value) => {
+              setExperience(value);
+              setHasSavedSettings(true);
+            }}
           />
 
-          <div className="dashboard-column">
-            {!hasSelectedPlants ? (
-              <section className="onboarding-panel">
-                <div>
-                  <p className="eyebrow">Prvi korak</p>
-                  <h2>Izberi rastline, ki jih imaš na vrtu</h2>
-                  <p>
-                    Dashboard začne z vremenom, prava dnevna opravila pa se prikažejo, ko izbereš rastline. Za hiter začetek uporabi paket za začetnike ali označi samo tiste, ki jih res gojiš.
-                  </p>
-                </div>
-                <button type="button" className="primary-button" onClick={selectStarterPlants}>Začni z osnovnim izborom</button>
-              </section>
-            ) : null}
-
-            <RecommendationList
-              eyebrow="Danes naredi"
-              title="Najbolj smiselna opravila"
-              subtitle={`Priporočila za ${selectedRegion.name}, ${selectedGardenType.name.toLowerCase()} in mesec ${getMonthName(selectedMonth)}. Razponi so mesečni, ne točni datumi.`}
-              recommendations={doRecommendations}
-              emptyMessage={hasSelectedPlants ? "Za izbrane rastline danes ni varnega opravila v tej skupini. Poglej opozorila in 7-dnevni pogled." : "Izberi rastline, da se prikažejo današnja koledarska opravila."}
-            />
-
-            <RecommendationList
-              eyebrow="Raje počakaj"
-              title="Opravila z vremenskim tveganjem"
-              subtitle="Sem pridejo opravila, ki jih mraz, veter, vročina ali dež lahko naredijo manj smiselna."
-              recommendations={waitRecommendations}
-              emptyMessage="Trenutno ni večjih razlogov za prestavljanje opravil zaradi vremena."
-            />
-
-            <RecommendationList
-              eyebrow="Spremljaj zaradi vremena"
-              title="Voda, veter, bolezni in stres"
-              subtitle="Kratek vremenski opomnik za zalivanje, mokre liste, vročino in opore."
-              recommendations={watchRecommendations}
-              emptyMessage="Vreme ne kaže posebnih dodatnih opozoril. Vseeno preveri zemljo in mikroklimo."
-            />
-
-            <div className="two-column">
-              <PlantSummary plants={plants} selectedPlantIds={selectedPlantIds} gardenType={selectedGardenType} />
-              <section className="panel compact-panel">
-                <div className="panel-heading">
-                  <p className="eyebrow">Regija</p>
-                  <h2>{selectedRegion.name}</h2>
-                </div>
-                <p>{selectedRegion.description}</p>
-                <div className="soft-note">{selectedRegion.seasonalNote}</div>
-              </section>
+          <PlantSummary plants={plants} selectedPlantIds={selectedPlantIds} gardenType={selectedGardenType} />
+          <section className="panel compact-panel">
+            <div className="panel-heading">
+              <p className="eyebrow">Vrtni kontekst</p>
+              <h2>{selectedRegion.name}</h2>
             </div>
-          </div>
+            <p>{selectedRegion.description}</p>
+            <div className="soft-note">{selectedRegion.seasonalNote}</div>
+          </section>
         </div>
-
-        <ForecastStrip weather={weather} region={selectedRegion} monthlyTasks={calendarRecommendations} />
       </main>
 
       <Footer />

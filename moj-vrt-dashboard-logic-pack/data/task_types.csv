@@ -1,0 +1,24 @@
+id,name,short_label,icon,category,default_section,priority_weight,default_time_needed,difficulty,description,show_in_onboarding,sort_order
+sowing_indoor,Setev v notranjih prostorih,Sej notri,🌱,plant_lifecycle,today,5,10–20 min,1,"Setev semen v lončke, platoje ali notranje setvene posode.",yes,10
+sowing_outdoor,Setev na prosto,Sej zunaj,🌱,plant_lifecycle,today,5,10–30 min,2,"Setev neposredno na gredo, visoko gredo ali v večje lonce zunaj.",yes,20
+transplanting,Presajanje sadik,Presadi,🪴,plant_lifecycle,today,5,15–45 min,2,Presajanje vzgojenih ali kupljenih sadik na stalno mesto.,yes,30
+planting,Sajenje,Sadi,🧄,plant_lifecycle,today,5,15–45 min,2,"Sajenje čebulčkov, gomoljev, trajnic, jagodičevja ali sadik.",yes,40
+watering,Zalivanje,Zalij,💧,care,today,4,5–20 min,1,"Zalivanje glede na vreme, tip vrta, posode in potrebe rastlin.",yes,50
+harvesting,Obiranje,Obiraj,🧺,harvest,today,4,5–30 min,1,"Pobiranje zrelih pridelkov, rez zelišč in sprotno obiranje plodov.",yes,60
+thinning,Redčenje,Redči,✂️,care,this_week,3,10–20 min,2,"Redčenje pregosto posejanih rastlin, da imajo dovolj prostora.",no,70
+weeding,Pletje,Pleti,🌿,care,this_week,3,10–30 min,1,"Odstranjevanje plevela in tekmecev za vodo, svetlobo in hranila.",no,80
+mulching,Zastiranje,Zastiraj,🍂,soil,this_week,3,15–45 min,2,Dodajanje zastirke za zadrževanje vlage in zmanjšanje plevela.,no,90
+soil_prep,Priprava tal,Pripravi tla,🪱,soil,this_week,3,20–60 min,2,"Rahljanje, dodajanje komposta, priprava grede ali posod.",yes,100
+fertilizing,Gnojenje,Pognoji,🧺,soil,this_week,3,10–30 min,2,Dodajanje komposta ali gnojila po potrebah rastlin in navodilih.,no,110
+staking,Opora in vezanje,Dodaj oporo,🪵,care,today,3,10–30 min,2,"Vezanje in podpiranje rastlin, kot so paradižnik, fižol in kumare.",no,120
+pruning,Rez in odstranjevanje poganjkov,Obreži,✂️,care,this_week,3,10–30 min,3,"Lahka rez, odstranjevanje zalistnikov ali suhih delov rastlin.",no,130
+pest_check,Pregled škodljivcev,Preglej škodljivce,🐛,protection,watch,4,5–15 min,2,"Pregled listov, stebel in spodnjih strani listov za škodljivce.",yes,140
+disease_check,Pregled bolezni,Preglej bolezni,🛡️,protection,watch,4,5–15 min,2,"Pregled rastlin za pege, plesni, gnitje in druge znake bolezni.",yes,150
+protection,Zaščita rastlin,Zaščiti,🛡️,protection,today,5,5–30 min,2,"Fizična zaščita pred pozebo, vetrom, točo, škodljivci ali soncem.",yes,160
+ventilation,Zračenje rastlinjaka,Prezrači,🌬️,protection,today,4,5 min,1,"Zračenje rastlinjaka, tunela ali zaprtega prostora ob toplem vremenu.",no,170
+hardening_off,Utrjevanje sadik,Utrjuj sadike,🌤️,plant_lifecycle,this_week,4,5–15 min,2,Postopno navajanje sadik na zunanje pogoje pred presajanjem.,no,180
+cleanup,Čiščenje vrta,Pospravi,🧹,maintenance,this_week,2,15–45 min,1,Odstranjevanje odmrlih rastlinskih ostankov in osnovno urejanje vrta.,no,190
+compost,Kompost,Kompost,♻️,soil,this_week,2,10–30 min,1,Dodajanje materiala na kompost ali uporaba zrelega komposta.,no,200
+wait,Počakaj,Počakaj,⏳,decision,wait,5,0 min,1,"Opravilo raje prestavi zaradi vremena, sezone ali prenizke zanesljivosti.",no,900
+watch,Spremljaj,Spremljaj,👀,decision,watch,4,2–10 min,1,Opozorilo ali opazovanje stanja; ni nujno takojšnje opravilo.,no,910
+planning,Načrtovanje,Načrtuj,🗓️,planning,this_week,2,10–20 min,1,"Načrt setve, nakup semen, pregled zalog in priprava naslednjih korakov.",yes,920

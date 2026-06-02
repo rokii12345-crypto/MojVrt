@@ -1,0 +1,6 @@
+id,name,url,type,notes
+open_meteo_docs,Open-Meteo Forecast API documentation,https://open-meteo.com/en/docs,weather_api_docs,Dokumentacija za daily/hourly vremenske spremenljivke in endpoint /v1/forecast.
+open_meteo_licence,Open-Meteo licence,https://open-meteo.com/en/licence,licence,API podatki so pod CC BY 4.0; potrebna je atribucija.
+open_meteo_pricing,Open-Meteo pricing / free use,https://open-meteo.com/en/pricing,terms,Brezplačna javna uporaba ima omejitve in ni garancije razpoložljivosti.
+arso_soil_temperature,ARSO temperature in stanje tal,https://meteo.arso.gov.si/met/sl/agromet/recent/tsoil/,agromet_reference,ARSO objavlja temperaturo tal v globini 5 in 10 cm ter stanje površine tal na opazovalnih postajah.
+arso_agromet_drought,ARSO Sušomer / agrometeorološki kontekst,https://www.meteo.si/uploads/probase/www/agromet/bulletin/drought/sl/,agromet_reference,Referenčni vir za sušne razmere in agrometeorološko spremljanje.

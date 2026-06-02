@@ -28,8 +28,8 @@ export function ForecastStrip({ weather, region, monthlyTasks }: Props) {
     <section className="panel">
       <div className="panel-heading">
         <p className="eyebrow">7 dni</p>
-        <h2>Kaj se splača delati naslednje dni?</h2>
-        <p>Vremenski pregled za zalivanje, presajanje, zaščito pred slano, veter in mokre dni. Podatki: Open-Meteo za {region.weatherName}.</p>
+        <h2>Vrtno vreme</h2>
+        <p>7-dnevni pregled za zalivanje, presajanje, slano, veter in mokre dni. Podatki: Open-Meteo za {region.weatherName}.</p>
       </div>
       <div className="forecast-grid">
         {weather.days.map((day) => {

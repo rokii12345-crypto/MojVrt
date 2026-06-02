@@ -1,0 +1,98 @@
+[
+  {
+    "id": "beginner_balcony",
+    "title": "Balkonski začetnik",
+    "description": "Za uporabnike z lonci, koriti in malo prostora.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "balkon",
+    "experience": "zacetnik",
+    "plant_ids": "paradiznik,bazilika,solata,drobnjak,jagode,meta",
+    "recommended_months": "3,4,5,6,7,8,9",
+    "onboarding_order": 1,
+    "hero_hint": "Majhen balkon, jasna opravila, brez kompliciranja."
+  },
+  {
+    "id": "raised_bed_beginner",
+    "title": "Visoka greda za začetnike",
+    "description": "Preprost izbor za prvo sezono v visoki gredi.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "visoka_greda",
+    "experience": "zacetnik",
+    "plant_ids": "solata,redkvica,korenje,bucke,paradiznik,bazilika,spinaca",
+    "recommended_months": "2,3,4,5,6,7,8,9,10",
+    "onboarding_order": 2,
+    "hero_hint": "Najlažji začetek za družinski vrt."
+  },
+  {
+    "id": "family_garden",
+    "title": "Klasičen zelenjavni vrt",
+    "description": "Najpogostejše rastline za domač vrt.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "vrt",
+    "experience": "zacetnik",
+    "plant_ids": "paradiznik,paprika,kumare,bucke,solata,korenje,cebula,cesen,fizol_nizek",
+    "recommended_months": "1,2,3,4,5,6,7,8,9,10,11",
+    "onboarding_order": 3,
+    "hero_hint": "Za uporabnika, ki ima nekaj gred in želi jasen plan."
+  },
+  {
+    "id": "herb_garden",
+    "title": "Zeliščni kotiček",
+    "description": "Zelišča za balkon, visoko gredo ali vrt.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "balkon",
+    "experience": "zacetnik",
+    "plant_ids": "bazilika,petersilj_list,drobnjak,meta,timijan,rozmarin,origano,koper",
+    "recommended_months": "2,3,4,5,6,7,8,9,10",
+    "onboarding_order": 4,
+    "hero_hint": "Za uporabnika, ki želi nekaj uporabnega in enostavnega."
+  },
+  {
+    "id": "tomato_lovers",
+    "title": "Paradižnik in poletne plodovke",
+    "description": "Za uporabnike, ki jih najbolj zanimajo paradižnik, paprika, kumare in bučke.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "vrt",
+    "experience": "zacetnik",
+    "plant_ids": "paradiznik,paprika,cili,kumare,bucke,bazilika",
+    "recommended_months": "2,3,4,5,6,7,8,9",
+    "onboarding_order": 5,
+    "hero_hint": "Veliko vremenskih opozoril za zalivanje, oporo in bolezni."
+  },
+  {
+    "id": "low_maintenance",
+    "title": "Čim manj dela",
+    "description": "Rastline in opravila za uporabnika, ki želi enostaven vrt.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "visoka_greda",
+    "experience": "zacetnik",
+    "plant_ids": "solata,redkvica,bucke,blitva,drobnjak,meta,jagode",
+    "recommended_months": "3,4,5,6,7,8,9,10",
+    "onboarding_order": 6,
+    "hero_hint": "Manj rastlin, manj kartic, bolj miren dashboard."
+  },
+  {
+    "id": "kids_garden",
+    "title": "Vrt z otroki",
+    "description": "Hitro rastoče, zanimive in razumljive rastline.",
+    "region_id": "osrednja_slovenija",
+    "garden_type": "visoka_greda",
+    "experience": "zacetnik",
+    "plant_ids": "redkvica,solata,grah,fizol_nizek,jagode,ognjic,kapucinka,bucke",
+    "recommended_months": "3,4,5,6,7,8,9",
+    "onboarding_order": 7,
+    "hero_hint": "Naj bo zabavno, kratko in brez preveč strokovnosti."
+  },
+  {
+    "id": "coastal_balcony",
+    "title": "Primorski balkon",
+    "description": "Za toplejšo lego, balkon in zelišča.",
+    "region_id": "primorska",
+    "garden_type": "balkon",
+    "experience": "zacetnik",
+    "plant_ids": "rozmarin,timijan,origano,bazilika,paradiznik,cili,jagode",
+    "recommended_months": "2,3,4,5,6,7,8,9,10,11",
+    "onboarding_order": 8,
+    "hero_hint": "Več pozornosti na vročino, veter in sušenje loncev."
+  }
+]
