@@ -1,11 +1,13 @@
+import { copyText } from "../lib/microcopy";
+
 export function Footer() {
   return (
     <footer className="site-footer">
       <p>
-        Moj vrt je informativni vrtnarski dashboard. Datumi so mesečni razponi, ne strokovno jamstvo. Upoštevaj sorto, mikroklimo, stanje tal in lokalna priporočila.
+        {copyText("source_disclaimer", "Koledar uporablja mesečne razpone. Dejanski čas opravil je odvisen od sorte, vremena, lege in stanja tal.")}
       </p>
       <p>
-        Vremenski podatki: Open-Meteo. Priporočila so informativna.
+        {copyText("weather_attribution", "Vremenski podatki: Open-Meteo. Priporočila so informativna.")}
       </p>
     </footer>
   );

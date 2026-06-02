@@ -1,0 +1,98 @@
+[
+  {
+    "plant_id": "paradiznik",
+    "neighbor_id": "bazilika",
+    "relation": "good",
+    "note": "Klasična kombinacija za mešane zasaditve; uporabna tudi v loncih.",
+    "confidence": "medium",
+    "source_ids": "kgzs_dobri_sosedje;source_needed"
+  },
+  {
+    "plant_id": "paradiznik",
+    "neighbor_id": "solata",
+    "relation": "good",
+    "note": "Solata lahko izkoristi prostor pred polno rastjo paradižnika.",
+    "confidence": "medium",
+    "source_ids": "kgzs_dobri_sosedje;source_needed"
+  },
+  {
+    "plant_id": "paradiznik",
+    "neighbor_id": "krompir",
+    "relation": "bad",
+    "note": "Sorodni rastlini; več skupnih bolezni, posebej plesni.",
+    "confidence": "medium_high",
+    "source_ids": "ivr_paradiznikova_plesen;ivr_krompirjeva_plesen"
+  },
+  {
+    "plant_id": "kumare",
+    "neighbor_id": "fizol_nizek",
+    "relation": "good",
+    "note": "Stročnice in bučevke se pogosto kombinirajo v mešanih zasaditvah.",
+    "confidence": "low",
+    "source_ids": "source_needed"
+  },
+  {
+    "plant_id": "bucke",
+    "neighbor_id": "redkvica",
+    "relation": "good",
+    "note": "Redkvica lahko zapolni prostor v začetku, preden bučke prerastejo gredo.",
+    "confidence": "medium",
+    "source_ids": "source_needed"
+  },
+  {
+    "plant_id": "solata",
+    "neighbor_id": "redkvica",
+    "relation": "good",
+    "note": "Hitri vrtnini za zaporedne setve in zapolnjevanje prostora.",
+    "confidence": "medium",
+    "source_ids": "source_needed"
+  },
+  {
+    "plant_id": "korenje",
+    "neighbor_id": "cebula",
+    "relation": "good",
+    "note": "Pogosta kombinacija korenovke in čebulnice v ljubiteljskih vrtovih.",
+    "confidence": "medium",
+    "source_ids": "kgzs_dobri_sosedje;source_needed"
+  },
+  {
+    "plant_id": "korenje",
+    "neighbor_id": "petersilj_list",
+    "relation": "bad",
+    "note": "Sorodni kobulnici; za kolobar in škodljivce raje ne skupaj vsako leto.",
+    "confidence": "low",
+    "source_ids": "source_needed"
+  },
+  {
+    "plant_id": "zelje",
+    "neighbor_id": "brokoli",
+    "relation": "bad",
+    "note": "Obe sta kapusnici; ne za kolobar na istem mestu zaporedoma.",
+    "confidence": "medium_high",
+    "source_ids": "ivr_kapusnice"
+  },
+  {
+    "plant_id": "jagode",
+    "neighbor_id": "cesen",
+    "relation": "good",
+    "note": "Pogosta ljubiteljska kombinacija; pred produkcijo preveri vir.",
+    "confidence": "low",
+    "source_ids": "source_needed"
+  },
+  {
+    "plant_id": "bazilika",
+    "neighbor_id": "paradiznik",
+    "relation": "good",
+    "note": "Toploljubna kombinacija za lonce in vrt.",
+    "confidence": "medium",
+    "source_ids": "kgzs_plodovke_lonce;kgzs_dobri_sosedje"
+  },
+  {
+    "plant_id": "cebula",
+    "neighbor_id": "fizol_nizek",
+    "relation": "bad",
+    "note": "Pogosta navedba v vrtnarskih seznamih; pred trditvijo kot strokovno dejstvo preveri.",
+    "confidence": "low",
+    "source_ids": "source_needed"
+  }
+]

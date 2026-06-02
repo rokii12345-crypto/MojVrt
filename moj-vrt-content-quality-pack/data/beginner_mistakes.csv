@@ -1,0 +1,101 @@
+mistake_id,plant_id,mistake,consequence,prevention,severity,months,confidence,source_ids
+paradiznik_m1,paradiznik,Prezgodnje presajanje na prosto,"Sadike zastanejo, lahko jih poškoduje mraz.",Počakaj na tople noči ali uporabi zaščito.,visoka,april;maj,medium,source_needed
+paradiznik_m2,paradiznik,Zalivanje po listih,Več tveganja za bolezni in slabša zračnost.,"Zalivaj ob korenini, zjutraj ali zvečer.",srednja,junij;julij;avgust,medium,source_needed
+paradiznik_m3,paradiznik,Pregosta saditev,Slabša zračnost in več bolezni.,"Upoštevaj razdaljo sajenja in odstrani odvečne poganjke, kjer je smiselno.",srednja,maj;junij,medium,source_needed
+paradiznik_m4,paradiznik,Premalo opore,Rastline se lomijo ali poležejo.,"Oporo dodaj zgodaj, še preden so rastline velike.",srednja,maj;junij,medium,source_needed
+paradiznik_m5,paradiznik,Neenakomerno zalivanje,Pokanje plodov in slabša kakovost.,Uporabi zastirko in zalivaj enakomerno.,srednja,julij;avgust,medium,source_needed
+paprika_m1,paprika,Prezgodnje presajanje na prosto,"Sadike zastanejo, lahko jih poškoduje mraz.",Počakaj na tople noči ali uporabi zaščito.,visoka,april;maj,medium,source_needed
+paprika_m2,paprika,Zalivanje po listih,Več tveganja za bolezni in slabša zračnost.,"Zalivaj ob korenini, zjutraj ali zvečer.",srednja,junij;julij;avgust,medium,source_needed
+paprika_m3,paprika,Pregosta saditev,Slabša zračnost in več bolezni.,"Upoštevaj razdaljo sajenja in odstrani odvečne poganjke, kjer je smiselno.",srednja,maj;junij,medium,source_needed
+paprika_m4,paprika,Premalo opore,Rastline se lomijo ali poležejo.,"Oporo dodaj zgodaj, še preden so rastline velike.",srednja,maj;junij,medium,source_needed
+paprika_m5,paprika,Neenakomerno zalivanje,Pokanje plodov in slabša kakovost.,Uporabi zastirko in zalivaj enakomerno.,srednja,julij;avgust,medium,source_needed
+kumare_m1,kumare,Prezgodnje presajanje na prosto,"Sadike zastanejo, lahko jih poškoduje mraz.",Počakaj na tople noči ali uporabi zaščito.,visoka,april;maj,medium,source_needed
+kumare_m2,kumare,Zalivanje po listih,Več tveganja za bolezni in slabša zračnost.,"Zalivaj ob korenini, zjutraj ali zvečer.",srednja,junij;julij;avgust,medium,source_needed
+kumare_m3,kumare,Pregosta saditev,Slabša zračnost in več bolezni.,"Upoštevaj razdaljo sajenja in odstrani odvečne poganjke, kjer je smiselno.",srednja,maj;junij,medium,source_needed
+kumare_m4,kumare,Premalo opore,Rastline se lomijo ali poležejo.,"Oporo dodaj zgodaj, še preden so rastline velike.",srednja,maj;junij,medium,source_needed
+kumare_m5,kumare,Neenakomerno zalivanje,Pokanje plodov in slabša kakovost.,Uporabi zastirko in zalivaj enakomerno.,srednja,julij;avgust,medium,source_needed
+bucke_m1,bucke,Prezgodnje presajanje na prosto,"Sadike zastanejo, lahko jih poškoduje mraz.",Počakaj na tople noči ali uporabi zaščito.,visoka,april;maj,medium,source_needed
+bucke_m2,bucke,Zalivanje po listih,Več tveganja za bolezni in slabša zračnost.,"Zalivaj ob korenini, zjutraj ali zvečer.",srednja,junij;julij;avgust,medium,source_needed
+bucke_m3,bucke,Pregosta saditev,Slabša zračnost in več bolezni.,"Upoštevaj razdaljo sajenja in odstrani odvečne poganjke, kjer je smiselno.",srednja,maj;junij,medium,source_needed
+bucke_m4,bucke,Premalo opore,Rastline se lomijo ali poležejo.,"Oporo dodaj zgodaj, še preden so rastline velike.",srednja,maj;junij,medium,source_needed
+bucke_m5,bucke,Neenakomerno zalivanje,Pokanje plodov in slabša kakovost.,Uporabi zastirko in zalivaj enakomerno.,srednja,julij;avgust,medium,source_needed
+solata_m1,solata,Setev prevelike količine naenkrat,Vse dozori hkrati in del pridelka propade.,Sej manjše količine na 1–2 tedna.,srednja,marec;april;september,medium,source_needed
+solata_m2,solata,Premalo vode v vročini,"Rastline venejo, grenijo ali gredo v cvet.",Vzdržuj zmerno vlago in poleti uporabi polsenco.,srednja,maj;junij;julij,medium,source_needed
+solata_m3,solata,Preveč sonca poleti,Hitrejše uhajanje v cvet.,Poleti raje izberi polsenčno lego ali počakaj na jesenski termin.,srednja,junij;julij;avgust,medium,source_needed
+solata_m4,solata,Pregosta setev,Slabša zračnost in manj kakovostni listi.,Redči pravočasno.,nizka,marec;april;maj,medium,source_needed
+solata_m5,solata,Nepregledovanje spodnje strani listov,Škodljivce opaziš prepozno.,Na hitro preglej liste ob vsakem obiranju.,srednja,maj;junij,medium,source_needed
+spinaca_m1,spinaca,Setev prevelike količine naenkrat,Vse dozori hkrati in del pridelka propade.,Sej manjše količine na 1–2 tedna.,srednja,marec;april;september,medium,source_needed
+spinaca_m2,spinaca,Premalo vode v vročini,"Rastline venejo, grenijo ali gredo v cvet.",Vzdržuj zmerno vlago in poleti uporabi polsenco.,srednja,maj;junij;julij,medium,source_needed
+spinaca_m3,spinaca,Preveč sonca poleti,Hitrejše uhajanje v cvet.,Poleti raje izberi polsenčno lego ali počakaj na jesenski termin.,srednja,junij;julij;avgust,medium,source_needed
+spinaca_m4,spinaca,Pregosta setev,Slabša zračnost in manj kakovostni listi.,Redči pravočasno.,nizka,marec;april;maj,medium,source_needed
+spinaca_m5,spinaca,Nepregledovanje spodnje strani listov,Škodljivce opaziš prepozno.,Na hitro preglej liste ob vsakem obiranju.,srednja,maj;junij,medium,source_needed
+korenje_m1,korenje,Setev v zbita tla,Korenine so deformirane ali slabo razvite.,Gredo pred setvijo zrahljaj in odstrani večje grudice.,srednja,marec;april;maj,medium,source_needed
+korenje_m2,korenje,Sveže gnojenje pred setvijo,Korenine se lahko cepijo ali slabše skladiščijo.,Uporabi zrel kompost in ne pretiravaj z gnojenjem.,srednja,marec;april,medium,source_needed
+korenje_m3,korenje,Pomanjkanje vlage med kalitvijo,Neenakomeren vznik.,Po setvi površino ohranjaj rahlo vlažno.,visoka,marec;april;maj,medium,source_needed
+korenje_m4,korenje,Neredčenje pregoste setve,Pridelki ostanejo majhni.,"Redči, ko so sadike dovolj velike.",srednja,april;maj;junij,medium,source_needed
+korenje_m5,korenje,Pozno obiranje hitrih sort,Plodovi postanejo oleseneli ali manj okusni.,"Obiraj sproti, ko dosežejo uporabno velikost.",nizka,april;maj;junij,medium,source_needed
+redkvica_m1,redkvica,Setev v zbita tla,Korenine so deformirane ali slabo razvite.,Gredo pred setvijo zrahljaj in odstrani večje grudice.,srednja,marec;april;maj,medium,source_needed
+redkvica_m2,redkvica,Sveže gnojenje pred setvijo,Korenine se lahko cepijo ali slabše skladiščijo.,Uporabi zrel kompost in ne pretiravaj z gnojenjem.,srednja,marec;april,medium,source_needed
+redkvica_m3,redkvica,Pomanjkanje vlage med kalitvijo,Neenakomeren vznik.,Po setvi površino ohranjaj rahlo vlažno.,visoka,marec;april;maj,medium,source_needed
+redkvica_m4,redkvica,Neredčenje pregoste setve,Pridelki ostanejo majhni.,"Redči, ko so sadike dovolj velike.",srednja,april;maj;junij,medium,source_needed
+redkvica_m5,redkvica,Pozno obiranje hitrih sort,Plodovi postanejo oleseneli ali manj okusni.,"Obiraj sproti, ko dosežejo uporabno velikost.",nizka,april;maj;junij,medium,source_needed
+fizol_nizek_m1,fizol_nizek,Setev v hladno mokro zemljo,Slab vznik in več poškodb mladih rastlin.,Počakaj na primernejše razmere; fižol naj gre v topla tla.,visoka,april;maj,medium,source_needed
+fizol_nizek_m2,fizol_nizek,Premalo opore pri opornih sortah,Rastline se zapletejo in slabše zračijo.,Oporo pripravi ob setvi ali kmalu po vzniku.,srednja,maj;junij,medium,source_needed
+fizol_nizek_m3,fizol_nizek,Preveč dušičnega gnojenja,"Veliko listov, manj strokov.",Gnoji zmerno; stročnice same vežejo dušik.,nizka,maj;junij,medium,source_needed
+fizol_nizek_m4,fizol_nizek,Premalo zalivanja ob cvetenju,Manj stročkov.,V suši zalij globlje.,srednja,junij;julij,medium,source_needed
+fizol_nizek_m5,fizol_nizek,Neredno obiranje,Manj kakovostni stroki.,Obiraj sproti.,nizka,julij;avgust,medium,source_needed
+grah_m1,grah,Setev v hladno mokro zemljo,Slab vznik in več poškodb mladih rastlin.,Počakaj na primernejše razmere; fižol naj gre v topla tla.,visoka,april;maj,medium,source_needed
+grah_m2,grah,Premalo opore pri opornih sortah,Rastline se zapletejo in slabše zračijo.,Oporo pripravi ob setvi ali kmalu po vzniku.,srednja,maj;junij,medium,source_needed
+grah_m3,grah,Preveč dušičnega gnojenja,"Veliko listov, manj strokov.",Gnoji zmerno; stročnice same vežejo dušik.,nizka,maj;junij,medium,source_needed
+grah_m4,grah,Premalo zalivanja ob cvetenju,Manj stročkov.,V suši zalij globlje.,srednja,junij;julij,medium,source_needed
+grah_m5,grah,Neredno obiranje,Manj kakovostni stroki.,Obiraj sproti.,nizka,julij;avgust,medium,source_needed
+zelje_m1,zelje,Sajenje brez kolobarja,Več težav s škodljivci in boleznimi v tleh.,Kapusnic ne vračaj prehitro na isto mesto.,srednja,marec;april;maj,medium,source_needed
+zelje_m2,zelje,Nezaščitene mlade sadike,Bolhači in gosenice hitro poškodujejo mlade liste.,Uporabi prekrivko in redno pregleduj rastline.,visoka,april;maj;junij,medium,source_needed
+zelje_m3,zelje,Premalo vode,Slabše oblikovanje glav ali rož.,"Zalivaj globlje, posebej v suši.",srednja,junij;julij;avgust,medium,source_needed
+zelje_m4,zelje,Pregosta saditev,Rastline se slabše razvijejo in zračijo.,Pusti dovolj prostora.,srednja,april;maj,medium,source_needed
+zelje_m5,zelje,Premalo hranil,Slaba rast in majhen pridelek.,Pred sajenjem dodaj kompost in med rastjo spremljaj kondicijo.,srednja,april;maj;junij,medium,source_needed
+brokoli_m1,brokoli,Sajenje brez kolobarja,Več težav s škodljivci in boleznimi v tleh.,Kapusnic ne vračaj prehitro na isto mesto.,srednja,marec;april;maj,medium,source_needed
+brokoli_m2,brokoli,Nezaščitene mlade sadike,Bolhači in gosenice hitro poškodujejo mlade liste.,Uporabi prekrivko in redno pregleduj rastline.,visoka,april;maj;junij,medium,source_needed
+brokoli_m3,brokoli,Premalo vode,Slabše oblikovanje glav ali rož.,"Zalivaj globlje, posebej v suši.",srednja,junij;julij;avgust,medium,source_needed
+brokoli_m4,brokoli,Pregosta saditev,Rastline se slabše razvijejo in zračijo.,Pusti dovolj prostora.,srednja,april;maj,medium,source_needed
+brokoli_m5,brokoli,Premalo hranil,Slaba rast in majhen pridelek.,Pred sajenjem dodaj kompost in med rastjo spremljaj kondicijo.,srednja,april;maj;junij,medium,source_needed
+cebula_m1,cebula,"Sajenje v mokra, težka tla",Več gnitja in slabše ukoreninjenje.,Izberi odcedno mesto ali dvignjeno gredo.,srednja,marec;april;oktober,medium,source_needed
+cebula_m2,cebula,Pregosta saditev,Manjše čebulice in slabše sušenje.,"Upoštevaj razdaljo in redči, kjer je potrebno.",nizka,marec;april,medium,source_needed
+cebula_m3,cebula,Preveč zalivanja ob dozorevanju,Slabše skladiščenje.,"Ko listje začne polegati, zalivanje zmanjšaš.",srednja,junij;julij,medium,source_needed
+cebula_m4,cebula,Plevel med vrstami,Čebulnice slabo tekmujejo s plevelom.,Pleji plitvo in redno.,srednja,april;maj;junij,medium,source_needed
+cebula_m5,cebula,Nepravilno sušenje po obiranju,Pridelek se hitreje kvari.,"Suši na zračnem, senčnem mestu.",srednja,julij;avgust,medium,source_needed
+cesen_m1,cesen,"Sajenje v mokra, težka tla",Več gnitja in slabše ukoreninjenje.,Izberi odcedno mesto ali dvignjeno gredo.,srednja,marec;april;oktober,medium,source_needed
+cesen_m2,cesen,Pregosta saditev,Manjše čebulice in slabše sušenje.,"Upoštevaj razdaljo in redči, kjer je potrebno.",nizka,marec;april,medium,source_needed
+cesen_m3,cesen,Preveč zalivanja ob dozorevanju,Slabše skladiščenje.,"Ko listje začne polegati, zalivanje zmanjšaš.",srednja,junij;julij,medium,source_needed
+cesen_m4,cesen,Plevel med vrstami,Čebulnice slabo tekmujejo s plevelom.,Pleji plitvo in redno.,srednja,april;maj;junij,medium,source_needed
+cesen_m5,cesen,Nepravilno sušenje po obiranju,Pridelek se hitreje kvari.,"Suši na zračnem, senčnem mestu.",srednja,julij;avgust,medium,source_needed
+krompir_m1,krompir,Setev v zbita tla,Korenine so deformirane ali slabo razvite.,Gredo pred setvijo zrahljaj in odstrani večje grudice.,srednja,marec;april;maj,medium,source_needed
+krompir_m2,krompir,Sveže gnojenje pred setvijo,Korenine se lahko cepijo ali slabše skladiščijo.,Uporabi zrel kompost in ne pretiravaj z gnojenjem.,srednja,marec;april,medium,source_needed
+krompir_m3,krompir,Pomanjkanje vlage med kalitvijo,Neenakomeren vznik.,Po setvi površino ohranjaj rahlo vlažno.,visoka,marec;april;maj,medium,source_needed
+krompir_m4,krompir,Neredčenje pregoste setve,Pridelki ostanejo majhni.,"Redči, ko so sadike dovolj velike.",srednja,april;maj;junij,medium,source_needed
+krompir_m5,krompir,Pozno obiranje hitrih sort,Plodovi postanejo oleseneli ali manj okusni.,"Obiraj sproti, ko dosežejo uporabno velikost.",nizka,april;maj;junij,medium,source_needed
+bazilika_m1,bazilika,Prevelik lonec brez odtekanja vode,Korenine lahko gnijejo.,Uporabi lonec z luknjami in odceden substrat.,srednja,april;maj,medium,source_needed
+bazilika_m2,bazilika,Premalo rezanja,"Rastline olesenijo ali cvetijo prej, listov je manj.","Reži redno, vendar zmerno.",nizka,maj;junij;julij;avgust,medium,source_needed
+bazilika_m3,bazilika,Prezgodnje postavljanje toploljubnih zelišč ven,Mraz poškoduje rastline.,Baziliko in podobna zelišča zaščiti pred hladnimi nočmi.,srednja,april;maj,medium,source_needed
+bazilika_m4,bazilika,Preveč vode,Slabša aroma in težave s koreninami.,"Zalij šele, ko se zgornji del substrata nekoliko osuši.",srednja,junij;julij;avgust,medium,source_needed
+bazilika_m5,bazilika,Premalo svetlobe na okenski polici,Rastline se pretegnejo in oslabijo.,"Izberi svetlo lego ali balkon, ko so razmere primerne.",nizka,marec;april;maj,medium,source_needed
+petersilj_list_m1,petersilj_list,Prevelik lonec brez odtekanja vode,Korenine lahko gnijejo.,Uporabi lonec z luknjami in odceden substrat.,srednja,april;maj,medium,source_needed
+petersilj_list_m2,petersilj_list,Premalo rezanja,"Rastline olesenijo ali cvetijo prej, listov je manj.","Reži redno, vendar zmerno.",nizka,maj;junij;julij;avgust,medium,source_needed
+petersilj_list_m3,petersilj_list,Prezgodnje postavljanje toploljubnih zelišč ven,Mraz poškoduje rastline.,Baziliko in podobna zelišča zaščiti pred hladnimi nočmi.,srednja,april;maj,medium,source_needed
+petersilj_list_m4,petersilj_list,Preveč vode,Slabša aroma in težave s koreninami.,"Zalij šele, ko se zgornji del substrata nekoliko osuši.",srednja,junij;julij;avgust,medium,source_needed
+petersilj_list_m5,petersilj_list,Premalo svetlobe na okenski polici,Rastline se pretegnejo in oslabijo.,"Izberi svetlo lego ali balkon, ko so razmere primerne.",nizka,marec;april;maj,medium,source_needed
+drobnjak_m1,drobnjak,Prevelik lonec brez odtekanja vode,Korenine lahko gnijejo.,Uporabi lonec z luknjami in odceden substrat.,srednja,april;maj,medium,source_needed
+drobnjak_m2,drobnjak,Premalo rezanja,"Rastline olesenijo ali cvetijo prej, listov je manj.","Reži redno, vendar zmerno.",nizka,maj;junij;julij;avgust,medium,source_needed
+drobnjak_m3,drobnjak,Prezgodnje postavljanje toploljubnih zelišč ven,Mraz poškoduje rastline.,Baziliko in podobna zelišča zaščiti pred hladnimi nočmi.,srednja,april;maj,medium,source_needed
+drobnjak_m4,drobnjak,Preveč vode,Slabša aroma in težave s koreninami.,"Zalij šele, ko se zgornji del substrata nekoliko osuši.",srednja,junij;julij;avgust,medium,source_needed
+drobnjak_m5,drobnjak,Premalo svetlobe na okenski polici,Rastline se pretegnejo in oslabijo.,"Izberi svetlo lego ali balkon, ko so razmere primerne.",nizka,marec;april;maj,medium,source_needed
+jagode_m1,jagode,Slaba priprava mesta,Večletna rastlina slabše uspeva več sezon.,Pred sajenjem dobro pripravi tla in lego.,visoka,marec;april;september;oktober,medium,source_needed
+jagode_m2,jagode,Premalo zalivanja v loncih,"Plodovi so manjši, rastlina trpi.",V loncih preverjaj vlago pogosteje.,srednja,maj;junij;julij,medium,source_needed
+jagode_m3,jagode,Slaba zračnost,Več plesni na plodovih in listih.,Odstrani poškodovane dele in ne saditi pregosto.,srednja,maj;junij;julij,medium,source_needed
+jagode_m4,jagode,Neredno obiranje,Plodovi propadajo ali privabljajo škodljivce.,"Obiraj sproti, posebej po dežju.",nizka,maj;junij;julij;avgust,medium,source_needed
+jagode_m5,jagode,Nejasna rez pri malinah,Manj pridelka naslednjo sezono.,Loči enkrat in dvakrat rodne sorte; rez preveri pred izvedbo.,srednja,avgust;september;oktober,medium,source_needed
+maline_m1,maline,Slaba priprava mesta,Večletna rastlina slabše uspeva več sezon.,Pred sajenjem dobro pripravi tla in lego.,visoka,marec;april;september;oktober,medium,source_needed
+maline_m2,maline,Premalo zalivanja v loncih,"Plodovi so manjši, rastlina trpi.",V loncih preverjaj vlago pogosteje.,srednja,maj;junij;julij,medium,source_needed
+maline_m3,maline,Slaba zračnost,Več plesni na plodovih in listih.,Odstrani poškodovane dele in ne saditi pregosto.,srednja,maj;junij;julij,medium,source_needed
+maline_m4,maline,Neredno obiranje,Plodovi propadajo ali privabljajo škodljivce.,"Obiraj sproti, posebej po dežju.",nizka,maj;junij;julij;avgust,medium,source_needed
+maline_m5,maline,Nejasna rez pri malinah,Manj pridelka naslednjo sezono.,Loči enkrat in dvakrat rodne sorte; rez preveri pred izvedbo.,srednja,avgust;september;oktober,medium,source_needed

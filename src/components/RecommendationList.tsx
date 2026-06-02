@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Recommendation } from "../types";
+import { copyText } from "../lib/microcopy";
 
 type Props = {
   title: string;
@@ -61,7 +62,7 @@ export function RecommendationList({ title, subtitle, eyebrow = "Priporočila", 
                 <span>{item.task_type ?? item.source ?? "opravilo"}</span>
               </div>
               <details>
-                <summary>Zakaj?</summary>
+                <summary>{copyText("why_button", "Zakaj?")}</summary>
                 <div className="details-body">
                   <p>{item.details ?? item.body}</p>
                   {item.recommended_action ? <p><strong>Priporočeno:</strong> {item.recommended_action}</p> : null}

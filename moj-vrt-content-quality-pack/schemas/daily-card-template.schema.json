@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Moj vrt daily card template",
+  "type": "object",
+  "required": [
+    "card_id",
+    "plant_id",
+    "months",
+    "task_type",
+    "section",
+    "title",
+    "short_reason",
+    "details",
+    "time_needed",
+    "priority",
+    "confidence",
+    "source_ids"
+  ],
+  "properties": {
+    "card_id": {
+      "type": "string"
+    },
+    "plant_id": {
+      "type": "string"
+    },
+    "months": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "section": {
+      "enum": [
+        "today",
+        "wait",
+        "watch",
+        "this_week"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "short_reason": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "details": {
+      "type": "string"
+    },
+    "time_needed": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "confidence": {
+      "enum": [
+        "low",
+        "medium",
+        "medium_high",
+        "high"
+      ]
+    },
+    "weather_rule_ids": {
+      "type": "string"
+    },
+    "garden_types": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "string"
+    }
+  }
+}

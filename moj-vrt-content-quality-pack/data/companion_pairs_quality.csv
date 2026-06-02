@@ -1,0 +1,13 @@
+plant_id,neighbor_id,relation,note,confidence,source_ids
+paradiznik,bazilika,good,Klasična kombinacija za mešane zasaditve; uporabna tudi v loncih.,medium,kgzs_dobri_sosedje;source_needed
+paradiznik,solata,good,Solata lahko izkoristi prostor pred polno rastjo paradižnika.,medium,kgzs_dobri_sosedje;source_needed
+paradiznik,krompir,bad,"Sorodni rastlini; več skupnih bolezni, posebej plesni.",medium_high,ivr_paradiznikova_plesen;ivr_krompirjeva_plesen
+kumare,fizol_nizek,good,Stročnice in bučevke se pogosto kombinirajo v mešanih zasaditvah.,low,source_needed
+bucke,redkvica,good,"Redkvica lahko zapolni prostor v začetku, preden bučke prerastejo gredo.",medium,source_needed
+solata,redkvica,good,Hitri vrtnini za zaporedne setve in zapolnjevanje prostora.,medium,source_needed
+korenje,cebula,good,Pogosta kombinacija korenovke in čebulnice v ljubiteljskih vrtovih.,medium,kgzs_dobri_sosedje;source_needed
+korenje,petersilj_list,bad,Sorodni kobulnici; za kolobar in škodljivce raje ne skupaj vsako leto.,low,source_needed
+zelje,brokoli,bad,Obe sta kapusnici; ne za kolobar na istem mestu zaporedoma.,medium_high,ivr_kapusnice
+jagode,cesen,good,Pogosta ljubiteljska kombinacija; pred produkcijo preveri vir.,low,source_needed
+bazilika,paradiznik,good,Toploljubna kombinacija za lonce in vrt.,medium,kgzs_plodovke_lonce;kgzs_dobri_sosedje
+cebula,fizol_nizek,bad,Pogosta navedba v vrtnarskih seznamih; pred trditvijo kot strokovno dejstvo preveri.,low,source_needed

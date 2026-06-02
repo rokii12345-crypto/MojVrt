@@ -1,5 +1,8 @@
 import taskTypesRaw from "../../moj-vrt-dashboard-logic-pack/data/task_types.json";
 import weatherRulesRaw from "../../moj-vrt-dashboard-logic-pack/data/weather_rules.json";
+import beginnerMistakesRaw from "../../moj-vrt-content-quality-pack/data/beginner_mistakes.json";
+import dailyCardTemplatesRaw from "../../moj-vrt-content-quality-pack/data/daily_card_templates.json";
+import problemWatchCardsRaw from "../../moj-vrt-content-quality-pack/data/problem_watch_cards.json";
 import type {
   CalendarTask,
   DailySummary,
@@ -50,8 +53,56 @@ type WeatherRule = {
   sort_weight: number;
 };
 
+type ContentConfidence = "low" | "medium" | "medium_high" | "high";
+
+type DailyCardTemplate = {
+  card_id: string;
+  plant_id: string;
+  months: string;
+  task_type: string;
+  section: "today" | "wait" | "watch" | "this_week";
+  title: string;
+  short_reason: string;
+  details: string;
+  time_needed: string;
+  priority: number;
+  confidence: ContentConfidence;
+  weather_rule_ids: string;
+  garden_types: string;
+  source_ids: string;
+};
+
+type ProblemWatchCard = {
+  problem_card_id: string;
+  plant_id: string;
+  problem_name: string;
+  problem_type: string;
+  watch_months: string;
+  weather_rule_ids: string;
+  early_signs: string;
+  beginner_message: string;
+  urgency: string;
+  source_ids: string;
+  confidence: ContentConfidence;
+};
+
+export type BeginnerMistake = {
+  mistake_id: string;
+  plant_id: string;
+  mistake: string;
+  consequence: string;
+  prevention: string;
+  severity: string;
+  months: string;
+  confidence: ContentConfidence;
+  source_ids: string;
+};
+
 const taskTypes = taskTypesRaw as TaskTypeDefinition[];
 const weatherRules = weatherRulesRaw as WeatherRule[];
+const dailyCardTemplates = dailyCardTemplatesRaw as DailyCardTemplate[];
+const problemWatchCards = problemWatchCardsRaw as ProblemWatchCard[];
+const beginnerMistakes = beginnerMistakesRaw as BeginnerMistake[];
 
 function priorityRank(priority: string): number {
   if (priority === "visoka") return 0;
@@ -66,19 +117,53 @@ function priorityScore(priority: string): number {
 }
 
 function confidenceToLocal(confidence: string): Recommendation["confidence"] {
-  if (confidence === "high") return "visoka";
+  if (confidence === "high" || confidence === "medium_high") return "visoka";
   if (confidence === "medium") return "srednja";
   return "nizka";
 }
 
 function confidenceToVerification(confidence: string): string {
-  if (confidence === "high") return "splošno_sprejeto";
-  if (confidence === "medium") return "splošno_sprejeto";
+  if (confidence === "high" || confidence === "medium_high" || confidence === "medium") return "splošno_sprejeto";
   return "potrebno_preveriti";
 }
 
 function appGardenTypeId(gardenType: GardenType): string {
   return gardenType.id === "klasicni_vrt" ? "vrt" : gardenType.id;
+}
+
+function splitList(value: string): string[] {
+  return value.split(/[;,]/).map((item) => item.trim()).filter(Boolean);
+}
+
+function monthNameSl(month: number): string {
+  return ["januar", "februar", "marec", "april", "maj", "junij", "julij", "avgust", "september", "oktober", "november", "december"][month - 1] ?? "";
+}
+
+function contentMonthsInclude(months: string, month: number): boolean {
+  const values = splitList(months).map((item) => item.toLowerCase());
+  return values.includes(String(month)) || values.includes(monthNameSl(month));
+}
+
+function contentGardenMatches(gardenTypes: string, gardenType: GardenType): boolean {
+  const values = splitList(gardenTypes);
+  return values.length === 0 || values.includes(appGardenTypeId(gardenType)) || (gardenType.id === "klasicni_vrt" && values.includes("vrt"));
+}
+
+function triggeredWeatherRuleIds(weatherRecommendations: Recommendation[]): Set<string> {
+  return new Set(weatherRecommendations.flatMap((item) => item.weather_rule_ids ?? []));
+}
+
+function contentPriority(priority: number): Recommendation["priority"] {
+  if (priority >= 8) return "visoka";
+  if (priority >= 5) return "srednja";
+  return "nizka";
+}
+
+function sectionType(section: DashboardSectionId): Recommendation["type"] {
+  if (section === "today") return "do";
+  if (section === "wait") return "wait";
+  if (section === "watch") return "watch";
+  return "watch";
 }
 
 function gardenTypeMatches(task: CalendarTask, gardenType: GardenType): boolean {
@@ -169,6 +254,129 @@ export function getMonthlyTasksForSelection(args: {
       } satisfies Recommendation;
     })
     .sort((a, b) => (b.score ?? 0) - (a.score ?? 0) || priorityRank(a.priority) - priorityRank(b.priority));
+}
+
+export function getQualityTemplateRecommendations(args: {
+  plants: Plant[];
+  selectedPlantIds: string[];
+  gardenType: GardenType;
+  month: number;
+  weatherRecommendations: Recommendation[];
+}): Recommendation[] {
+  const selectedIds = new Set(args.selectedPlantIds);
+  const plantMap = new Map(args.plants.map((plant) => [plant.id, plant]));
+  const activeWeatherIds = triggeredWeatherRuleIds(args.weatherRecommendations);
+
+  return dailyCardTemplates
+    .filter((template) => selectedIds.has(template.plant_id))
+    .filter((template) => contentMonthsInclude(template.months, args.month))
+    .filter((template) => contentGardenMatches(template.garden_types, args.gardenType))
+    .filter((template) => {
+      const ruleIds = splitList(template.weather_rule_ids);
+      return ruleIds.length === 0 || ruleIds.some((id) => activeWeatherIds.has(id));
+    })
+    .map((template) => {
+      const ruleIds = splitList(template.weather_rule_ids);
+      const weatherMatch = ruleIds.some((id) => activeWeatherIds.has(id));
+      const hasWeatherCondition = ruleIds.length > 0;
+      const mainSection = template.section !== "this_week";
+      const section = template.confidence === "low" && mainSection ? "this_week" : template.section;
+      const baseScore = template.priority * 10;
+      const score = baseScore + 3 + 5 + (weatherMatch ? 4 : 0) - (hasWeatherCondition && !weatherMatch ? 2 : 0);
+      const plant = plantMap.get(template.plant_id);
+
+      return {
+        id: `quality-${template.card_id}`,
+        section,
+        title: template.title,
+        body: template.details,
+        short_reason: template.short_reason,
+        type: sectionType(section),
+        priority: contentPriority(template.priority),
+        score,
+        task_type: template.task_type,
+        time_needed: template.time_needed,
+        difficulty: plant?.difficulty && plant.difficulty <= 5 ? plant.difficulty as Recommendation["difficulty"] : 2,
+        plantId: template.plant_id,
+        plantName: plant?.slovensko_ime,
+        source: "calendar",
+        confidence: confidenceToLocal(template.confidence),
+        verification_status: confidenceToVerification(template.confidence),
+        source_ids: splitList(template.source_ids),
+        weather_rule_ids: ruleIds,
+        details: template.details,
+        recommended_action: template.details,
+        ui_badge: template.task_type
+      } satisfies Recommendation;
+    })
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0));
+}
+
+export function getProblemWatchRecommendations(args: {
+  plants: Plant[];
+  selectedPlantIds: string[];
+  month: number;
+  weatherRecommendations: Recommendation[];
+}): Recommendation[] {
+  const selectedIds = new Set(args.selectedPlantIds);
+  const plantMap = new Map(args.plants.map((plant) => [plant.id, plant]));
+  const activeWeatherIds = triggeredWeatherRuleIds(args.weatherRecommendations);
+
+  return problemWatchCards
+    .filter((card) => selectedIds.has(card.plant_id))
+    .filter((card) => contentMonthsInclude(card.watch_months, args.month))
+    .filter((card) => card.confidence !== "low")
+    .filter((card) => {
+      const ruleIds = splitList(card.weather_rule_ids);
+      return ruleIds.length === 0 || ruleIds.some((id) => activeWeatherIds.has(id));
+    })
+    .map((card) => {
+      const plant = plantMap.get(card.plant_id);
+      const ruleIds = splitList(card.weather_rule_ids);
+      const urgentBoost = card.urgency === "high" ? 18 : card.urgency === "medium" ? 10 : 4;
+
+      return {
+        id: `problem-${card.problem_card_id}`,
+        section: "watch",
+        title: `${plant?.slovensko_ime ?? card.plant_id}: ${card.problem_name}`,
+        body: card.beginner_message,
+        short_reason: card.beginner_message,
+        type: "watch",
+        priority: card.urgency === "high" ? "visoka" : card.urgency === "medium" ? "srednja" : "nizka",
+        score: 65 + urgentBoost,
+        task_type: card.problem_type,
+        time_needed: "5–10 min",
+        difficulty: 1,
+        plantId: card.plant_id,
+        plantName: plant?.slovensko_ime,
+        source: "calendar",
+        confidence: confidenceToLocal(card.confidence),
+        verification_status: confidenceToVerification(card.confidence),
+        source_ids: splitList(card.source_ids),
+        weather_rule_ids: ruleIds,
+        details: `Zgodnji znaki: ${card.early_signs}. ${card.beginner_message}`,
+        recommended_action: card.early_signs,
+        ui_badge: "spremljaj"
+      } satisfies Recommendation;
+    })
+    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+    .slice(0, 6);
+}
+
+export function getBeginnerMistakesForSelection(args: {
+  selectedPlantIds: string[];
+  month: number;
+}): BeginnerMistake[] {
+  const selectedIds = new Set(args.selectedPlantIds);
+  return beginnerMistakes
+    .filter((mistake) => selectedIds.has(mistake.plant_id))
+    .filter((mistake) => contentMonthsInclude(mistake.months, args.month))
+    .filter((mistake) => mistake.confidence !== "low")
+    .sort((a, b) => {
+      const severityScore = (value: string) => value === "high" ? 0 : value === "medium" ? 1 : 2;
+      return severityScore(a.severity) - severityScore(b.severity);
+    })
+    .slice(0, 6);
 }
 
 function listIncludes(list: string, value: string): boolean {

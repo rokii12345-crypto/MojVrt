@@ -6,7 +6,9 @@ import type { CalendarTask, Plant, UserExperience, WeatherSnapshot } from "./typ
 import { regions, gardenTypes } from "./data/regions";
 import { getCurrentMonthNumber, getMonthName } from "./lib/date";
 import { fetchWeather } from "./lib/weatherApi";
-import { buildDailySummary, getMonthlyTasksForSelection, getWeatherRecommendations, mergeTodayRecommendations } from "./lib/recommendations";
+import { buildDailySummary, getBeginnerMistakesForSelection, getMonthlyTasksForSelection, getProblemWatchRecommendations, getQualityTemplateRecommendations, getWeatherRecommendations, mergeTodayRecommendations } from "./lib/recommendations";
+import { copyText } from "./lib/microcopy";
+import { ContentQualitySections } from "./components/ContentQualitySections";
 import { Controls } from "./components/Controls";
 import { ForecastStrip } from "./components/ForecastStrip";
 import { Footer } from "./components/Footer";
@@ -141,9 +143,35 @@ function App() {
     [selectedGardenType, selectedMonth, selectedRegion, weather]
   );
 
+  const qualityTemplateRecommendations = useMemo(
+    () => getQualityTemplateRecommendations({
+      plants,
+      selectedPlantIds,
+      gardenType: selectedGardenType,
+      month: selectedMonth,
+      weatherRecommendations
+    }),
+    [selectedGardenType, selectedMonth, selectedPlantIds, weatherRecommendations]
+  );
+
+  const problemWatchRecommendations = useMemo(
+    () => getProblemWatchRecommendations({
+      plants,
+      selectedPlantIds,
+      month: selectedMonth,
+      weatherRecommendations
+    }),
+    [selectedMonth, selectedPlantIds, weatherRecommendations]
+  );
+
+  const beginnerMistakes = useMemo(
+    () => getBeginnerMistakesForSelection({ selectedPlantIds, month: selectedMonth }),
+    [selectedMonth, selectedPlantIds]
+  );
+
   const todayRecommendations = useMemo(
-    () => mergeTodayRecommendations(calendarRecommendations, weatherRecommendations),
-    [calendarRecommendations, weatherRecommendations]
+    () => mergeTodayRecommendations([...qualityTemplateRecommendations, ...calendarRecommendations], weatherRecommendations),
+    [calendarRecommendations, qualityTemplateRecommendations, weatherRecommendations]
   );
 
   function isLongRecommendation(timeNeeded?: string): boolean {
@@ -291,7 +319,7 @@ function App() {
             title="Kaj naj danes naredim?"
             subtitle={`Za ${selectedRegion.name}, ${selectedGardenType.name.toLowerCase()} in mesec ${getMonthName(selectedMonth)}. Razponi so mesečni, ne točni datumi.`}
             recommendations={doRecommendations}
-            emptyMessage={hasSelectedPlants ? "Za izbrane rastline danes ni jasnega opravila v tej skupini. Poglej opozorila in 7-dnevni pogled." : "Izberi rastline, da se prikažejo današnja koledarska opravila."}
+            emptyMessage={hasSelectedPlants ? "Za izbrane rastline danes ni jasnega opravila v tej skupini. Poglej opozorila in 7-dnevni pogled." : copyText("empty_plants", "Izberi nekaj rastlin, da bo dashboard pokazal opravila za tvoj vrt.")}
             limit={5}
           />
 
@@ -323,6 +351,13 @@ function App() {
           recommendations={thisWeekRecommendations}
           emptyMessage="Za ta teden ni dodatnih opravil za izbrano kombinacijo."
           limit={6}
+        />
+
+        <ContentQualitySections
+          plants={plants}
+          selectedPlantIds={selectedPlantIds}
+          problemWatch={problemWatchRecommendations}
+          beginnerMistakes={beginnerMistakes}
         />
 
       </main>

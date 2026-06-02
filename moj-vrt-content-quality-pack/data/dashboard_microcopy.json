@@ -1,0 +1,44 @@
+[
+  {
+    "copy_id": "hero_summary_default",
+    "location": "hero",
+    "text": "Danes najprej preveri vreme, vlago tal in najpomembnejša opravila za svoje rastline.",
+    "tone": "mirno, uporabno"
+  },
+  {
+    "copy_id": "empty_plants",
+    "location": "empty_state",
+    "text": "Izberi nekaj rastlin, da bo dashboard pokazal opravila za tvoj vrt.",
+    "tone": "spodbudno"
+  },
+  {
+    "copy_id": "weather_attribution",
+    "location": "footer",
+    "text": "Vremenski podatki: Open-Meteo. Priporočila so informativna in niso strokovno jamstvo.",
+    "tone": "jasno"
+  },
+  {
+    "copy_id": "source_disclaimer",
+    "location": "footer",
+    "text": "Koledar uporablja mesečne razpone. Dejanski čas opravil je odvisen od sorte, vremena, lege in stanja tal.",
+    "tone": "zaupanja vredno"
+  },
+  {
+    "copy_id": "why_button",
+    "location": "card",
+    "text": "Zakaj?",
+    "tone": "kratko"
+  },
+  {
+    "copy_id": "show_more_week",
+    "location": "section",
+    "text": "Pokaži več opravil za ta teden",
+    "tone": "nevpadljivo"
+  },
+  {
+    "copy_id": "edit_garden",
+    "location": "garden_profile_card",
+    "text": "Uredi moj vrt",
+    "tone": "preprosto"
+  }
+]

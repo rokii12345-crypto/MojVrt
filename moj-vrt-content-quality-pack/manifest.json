@@ -1,0 +1,11 @@
+{
+  "name": "moj-vrt-content-quality-pack",
+  "created_at": "2026-06-02",
+  "purpose": "Quality data for Moj vrt dashboard and plant pages",
+  "plants_count": 20,
+  "daily_card_templates_count": 84,
+  "problem_watch_cards_count": 17,
+  "beginner_mistakes_count": 100,
+  "seo_pages_count": 40,
+  "recommended_next_step": "Import daily card templates into recommendation engine and use only top cards on dashboard."
+}

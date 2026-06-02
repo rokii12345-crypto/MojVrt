@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Moj vrt enriched plant profile",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "latin",
+    "group",
+    "diff",
+    "beginner",
+    "balcony",
+    "raised",
+    "sun",
+    "soil",
+    "water",
+    "spacing",
+    "months",
+    "harvest",
+    "source",
+    "desc"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "latin": {
+      "type": "string"
+    },
+    "group": {
+      "type": "string"
+    },
+    "beginner": {
+      "type": "string"
+    },
+    "balcony": {
+      "type": "string"
+    },
+    "raised": {
+      "type": "string"
+    },
+    "sun": {
+      "type": "string"
+    },
+    "soil": {
+      "type": "string"
+    },
+    "water": {
+      "type": "string"
+    },
+    "spacing": {
+      "type": "string"
+    },
+    "months": {
+      "type": "string"
+    },
+    "harvest": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "diff": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    }
+  }
+}

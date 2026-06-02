@@ -1,4 +1,5 @@
 import type { GardenType, Plant, Region, UserExperience } from "../types";
+import { copyText } from "../lib/microcopy";
 
 type Props = {
   region: Region;
@@ -41,7 +42,7 @@ export function GardenSummary({ region, gardenType, experience, plants, selected
         </div>
       </dl>
       <button type="button" className="ghost-button summary-edit-button" onClick={onEdit}>
-        Uredi
+        {copyText("edit_garden", "Uredi")}
       </button>
     </section>
   );

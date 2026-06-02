@@ -1,0 +1,137 @@
+[
+  {
+    "source_id": "kgzs_eknjiznica",
+    "name": "KGZS e-knjižnica",
+    "organization": "Kmetijsko gozdarska zbornica Slovenije",
+    "url": "https://www.kgzs.si/kgzs/kmetijsko-svetovanje/e-knjiznica",
+    "use_for": "Praktični vrtnarski nasveti, sajenje plodovk, dobri/slabi sosedje, fižol, solatnice.",
+    "license_note": "Uporabi kot referenco; ne kopiraj daljših besedil. V aplikaciji navedba vira.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "kgzs_plodovke_lonce",
+    "name": "Sajenje plodovk v vrt in v lonce",
+    "organization": "KGZS / Zavod Celje",
+    "url": "https://www.kgzs.si/kgzs/kmetijsko-svetovanje/e-knjiznica/e-knjiznica-zapis/sajenje-plodovk-v-vrt-in-v-lonce-za-se-vec-samooskrbe-iz-zelenjavnega-vrta",
+    "use_for": "Praktični nasveti za plodovke na vrtu, terasi, balkonu in v loncih.",
+    "license_note": "Referenčni vir; povzemaj s svojimi besedami.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "kgzs_dobri_sosedje",
+    "name": "Dobri in slabi sosedje v samooskrbnem zelenjavnem vrtu",
+    "organization": "KGZS / Zavod Celje",
+    "url": "https://www.kgzs.si/kgzs/kmetijsko-svetovanje/e-knjiznica/e-knjiznica-zapis/dobri-in-slabi-sosedje-v-samooskrbnem-zelenjavnem-vrtu",
+    "use_for": "Struktura in validacija tabel dobrih/slabih sosedov.",
+    "license_note": "Referenčni vir; ne kopiraj tabel dobesedno.",
+    "reliability": "medium_high"
+  },
+  {
+    "source_id": "kgzs_temp_tal",
+    "name": "Temperatura tal in kaljenje nekaterih vrtnin",
+    "organization": "KGZS Ljubljana",
+    "url": "https://lj.kgzs.si/Portals/1/strokovni-nasveti/zeljenadarstvo/TL-16-Temperatura-tal-in-kaljenje.pdf",
+    "use_for": "Opozorila, da je pri setvi pomembna temperatura tal; ne uporabljaj samo koledarskih datumov.",
+    "license_note": "Referenčni vir; dodaj povezavo in ne kopiraj PDF vsebine.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_portal",
+    "name": "IVR portal — Integrirano varstvo rastlin",
+    "organization": "KIS in partnerji",
+    "url": "https://www.ivr.si/",
+    "use_for": "Bolezni, škodljivci, preventivni ukrepi in opozorila za varstvo rastlin.",
+    "license_note": "Referenčni strokovni vir; v aplikaciji ne ponujaj FFS navodil brez preverbe aktualnega registra.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_paradiznikova_plesen",
+    "name": "Paradižnikova plesen — IVR",
+    "organization": "IVR portal",
+    "url": "https://www.ivr.si/skodljivec/paradiznikova-plesen/",
+    "use_for": "Opozorila za paradižnik, krompir in jajčevec ob mokrem, hladnejšem vremenu.",
+    "license_note": "Referenčni vir; povzemaj preventivne informacije.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_krompirjeva_plesen",
+    "name": "Krompirjeva plesen — IVR",
+    "organization": "IVR portal",
+    "url": "https://www.ivr.si/skodljivec/krompirjeva-plesen/",
+    "use_for": "Opozorila za krompir in paradižnik v hladnem/deževnem vremenu.",
+    "license_note": "Referenčni vir.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_listne_usi_solatnice",
+    "name": "Listne uši na solatnicah — IVR",
+    "organization": "IVR portal",
+    "url": "https://www.ivr.si/skodljivec/listne-usi-2/",
+    "use_for": "Opozorila za solato in druge listnate vrtnine v maju/juniju.",
+    "license_note": "Referenčni vir.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_fizolova_muha",
+    "name": "Fižolova muha — IVR",
+    "organization": "IVR portal",
+    "url": "https://www.ivr.si/skodljivec/fizolova-muha/",
+    "use_for": "Opozorila za slab vznik fižola/graha v hladni, mokri zemlji.",
+    "license_note": "Referenčni vir.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_kapusnice",
+    "name": "Kapusnice — IVR",
+    "organization": "IVR portal",
+    "url": "https://www.ivr.si/rastlina/kapusnice/",
+    "use_for": "Kapusovi bolhači, mlade sadike, prekrivanje posevkov in oskrba kapusnic.",
+    "license_note": "Referenčni vir.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "ivr_pepelovke_bucevk",
+    "name": "Pepelovke bučevk — IVR",
+    "organization": "IVR portal",
+    "url": "https://www.ivr.si/skodljivec/pepelovke-bucevk/",
+    "use_for": "Bučke, kumare in druge bučevke; pregled starejših listov in zračnost rastlin.",
+    "license_note": "Referenčni vir.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "arso_agromet",
+    "name": "ARSO agrometeorologija",
+    "organization": "ARSO",
+    "url": "https://meteo.arso.gov.si/met/sl/agromet/",
+    "use_for": "Agrometeorološki kontekst, suša, fenologija in vremenske razmere za Slovenijo.",
+    "license_note": "Referenčni javni vir; navedi ARSO.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "arso_temp_tal",
+    "name": "ARSO temperature in stanje tal",
+    "organization": "ARSO",
+    "url": "https://meteo.arso.gov.si/met/sl/agromet/recent/tsoil/",
+    "use_for": "Temperatura tal na 5 in 10 cm; uporabi za opozorila pri setvi.",
+    "license_note": "Referenčni javni vir; navedi ARSO.",
+    "reliability": "high"
+  },
+  {
+    "source_id": "open_meteo",
+    "name": "Open-Meteo Forecast API",
+    "organization": "Open-Meteo",
+    "url": "https://open-meteo.com/",
+    "use_for": "Dnevne vremenske spremenljivke za dashboard.",
+    "license_note": "CC BY 4.0; obvezna atribucija. Free API je nekomercialen in omejen.",
+    "reliability": "medium_high"
+  },
+  {
+    "source_id": "source_needed",
+    "name": "Vir potreben",
+    "organization": "Moj vrt uredništvo",
+    "url": "",
+    "use_for": "Podatek je uporaben za MVP, a mora pred produkcijo dobiti strokovno potrditev ali konkreten vir.",
+    "license_note": "Ne prikazuj kot preverjeno.",
+    "reliability": "low"
+  }
+]

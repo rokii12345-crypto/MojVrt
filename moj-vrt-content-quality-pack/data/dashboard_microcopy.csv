@@ -1,0 +1,8 @@
+copy_id,location,text,tone
+hero_summary_default,hero,"Danes najprej preveri vreme, vlago tal in najpomembnejša opravila za svoje rastline.","mirno, uporabno"
+empty_plants,empty_state,"Izberi nekaj rastlin, da bo dashboard pokazal opravila za tvoj vrt.",spodbudno
+weather_attribution,footer,Vremenski podatki: Open-Meteo. Priporočila so informativna in niso strokovno jamstvo.,jasno
+source_disclaimer,footer,"Koledar uporablja mesečne razpone. Dejanski čas opravil je odvisen od sorte, vremena, lege in stanja tal.",zaupanja vredno
+why_button,card,Zakaj?,kratko
+show_more_week,section,Pokaži več opravil za ta teden,nevpadljivo
+edit_garden,garden_profile_card,Uredi moj vrt,preprosto
