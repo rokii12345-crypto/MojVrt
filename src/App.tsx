@@ -10,6 +10,7 @@ import { buildDailySummary, getMonthlyTasksForSelection, getWeatherRecommendatio
 import { Controls } from "./components/Controls";
 import { ForecastStrip } from "./components/ForecastStrip";
 import { Footer } from "./components/Footer";
+import { GardenSummary } from "./components/GardenSummary";
 import { Hero } from "./components/Hero";
 import { PlantSummary } from "./components/PlantSummary";
 import { RecommendationList } from "./components/RecommendationList";
@@ -77,6 +78,7 @@ function App() {
   const [experience, setExperience] = useState<UserExperience>(savedSettings.experience);
   const [selectedStarterProfileId, setSelectedStarterProfileId] = useState(savedSettings.selectedStarterProfileId);
   const [hasSavedSettings, setHasSavedSettings] = useState(savedSettings.hasSavedSettings);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [weather, setWeather] = useState<WeatherSnapshot | null>(null);
   const [weatherError, setWeatherError] = useState<string | null>(null);
 
@@ -144,9 +146,24 @@ function App() {
     [calendarRecommendations, weatherRecommendations]
   );
 
-  const doRecommendations = useMemo(
+  function isLongRecommendation(timeNeeded?: string): boolean {
+    if (!timeNeeded) return false;
+    return /45|60|90|1 h|2 h|uro|več/i.test(timeNeeded);
+  }
+
+  const todayActionRecommendations = useMemo(
     () => hasSelectedPlants ? todayRecommendations.filter((item) => item.section === "today") : [],
     [hasSelectedPlants, todayRecommendations]
+  );
+
+  const doRecommendations = useMemo(
+    () => todayActionRecommendations.filter((item) => !isLongRecommendation(item.time_needed) && (item.difficulty ?? 1) < 4),
+    [todayActionRecommendations]
+  );
+
+  const longerTodayRecommendations = useMemo(
+    () => todayActionRecommendations.filter((item) => isLongRecommendation(item.time_needed) || (item.difficulty ?? 1) >= 4),
+    [todayActionRecommendations]
   );
 
   const waitRecommendations = useMemo(
@@ -160,8 +177,8 @@ function App() {
   );
 
   const thisWeekRecommendations = useMemo(
-    () => todayRecommendations.filter((item) => item.section === "this_week").slice(0, 6),
-    [todayRecommendations]
+    () => [...longerTodayRecommendations, ...todayRecommendations.filter((item) => item.section === "this_week")].slice(0, 6),
+    [longerTodayRecommendations, todayRecommendations]
   );
 
   const dailySummary = useMemo(
@@ -198,6 +215,7 @@ function App() {
     setExperience(profile.experience as UserExperience);
     setSelectedPlantIds(profile.plant_ids.split(",").map((id) => id.trim()).filter(Boolean));
     setHasSavedSettings(true);
+    setSettingsOpen(false);
   }
 
   return (
@@ -206,6 +224,66 @@ function App() {
 
       <main>
         {!hasSavedSettings ? <StarterProfiles profiles={starterProfiles} onSelectProfile={selectStarterProfile} /> : null}
+
+        <GardenSummary
+          region={selectedRegion}
+          gardenType={selectedGardenType}
+          experience={experience}
+          plants={plants}
+          selectedPlantIds={selectedPlantIds}
+          onEdit={() => setSettingsOpen((open) => !open)}
+        />
+
+        {settingsOpen ? (
+          <div className="settings-grid">
+            <Controls
+              regions={regions}
+              gardenTypes={gardenTypes}
+              plants={plants}
+              selectedRegionId={selectedRegionId}
+              selectedGardenTypeId={selectedGardenTypeId}
+              selectedMonth={selectedMonth}
+              selectedPlantIds={selectedPlantIds}
+              highPriorityOnly={highPriorityOnly}
+              experience={experience}
+              onRegionChange={(value) => {
+                setSelectedRegionId(value);
+                setHasSavedSettings(true);
+              }}
+              onGardenTypeChange={(value) => {
+                setSelectedGardenTypeId(value);
+                setHasSavedSettings(true);
+              }}
+              onMonthChange={(value) => {
+                setSelectedMonth(value);
+                setHasSavedSettings(true);
+              }}
+              onPlantToggle={(value) => {
+                togglePlant(value);
+                setHasSavedSettings(true);
+              }}
+              onSelectStarterPlants={selectStarterPlants}
+              onHighPriorityOnlyChange={(value) => {
+                setHighPriorityOnly(value);
+                setHasSavedSettings(true);
+              }}
+              onExperienceChange={(value) => {
+                setExperience(value);
+                setHasSavedSettings(true);
+              }}
+            />
+
+            <PlantSummary plants={plants} selectedPlantIds={selectedPlantIds} gardenType={selectedGardenType} />
+            <section className="panel compact-panel">
+              <div className="panel-heading">
+                <p className="eyebrow">Vrtni kontekst</p>
+                <h2>{selectedRegion.name}</h2>
+              </div>
+              <p>{selectedRegion.description}</p>
+              <div className="soft-note">{selectedRegion.seasonalNote}</div>
+            </section>
+          </div>
+        ) : null}
 
         <div className="dashboard-column">
           <RecommendationList
@@ -247,54 +325,6 @@ function App() {
           limit={6}
         />
 
-        <div className="settings-grid">
-          <Controls
-            regions={regions}
-            gardenTypes={gardenTypes}
-            plants={plants}
-            selectedRegionId={selectedRegionId}
-            selectedGardenTypeId={selectedGardenTypeId}
-            selectedMonth={selectedMonth}
-            selectedPlantIds={selectedPlantIds}
-            highPriorityOnly={highPriorityOnly}
-            experience={experience}
-            onRegionChange={(value) => {
-              setSelectedRegionId(value);
-              setHasSavedSettings(true);
-            }}
-            onGardenTypeChange={(value) => {
-              setSelectedGardenTypeId(value);
-              setHasSavedSettings(true);
-            }}
-            onMonthChange={(value) => {
-              setSelectedMonth(value);
-              setHasSavedSettings(true);
-            }}
-            onPlantToggle={(value) => {
-              togglePlant(value);
-              setHasSavedSettings(true);
-            }}
-            onSelectStarterPlants={selectStarterPlants}
-            onHighPriorityOnlyChange={(value) => {
-              setHighPriorityOnly(value);
-              setHasSavedSettings(true);
-            }}
-            onExperienceChange={(value) => {
-              setExperience(value);
-              setHasSavedSettings(true);
-            }}
-          />
-
-          <PlantSummary plants={plants} selectedPlantIds={selectedPlantIds} gardenType={selectedGardenType} />
-          <section className="panel compact-panel">
-            <div className="panel-heading">
-              <p className="eyebrow">Vrtni kontekst</p>
-              <h2>{selectedRegion.name}</h2>
-            </div>
-            <p>{selectedRegion.description}</p>
-            <div className="soft-note">{selectedRegion.seasonalNote}</div>
-          </section>
-        </div>
       </main>
 
       <Footer />
