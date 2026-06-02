@@ -88,6 +88,48 @@ button {
   color: var(--green-700);
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji-badge,
+.card-emoji,
+.profile-emoji {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  line-height: 1;
+  background: #edf6e5;
+  box-shadow: inset 0 0 0 1px rgba(79, 119, 45, 0.12);
+}
+
+.emoji-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  font-size: 1.3rem;
+}
+
+.garden-emoji-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -4px 0 18px;
+}
+
+.garden-emoji-strip span {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 15px;
+  background: #edf6e5;
+  font-size: 1.35rem;
+  box-shadow: inset 0 0 0 1px rgba(79, 119, 45, 0.12);
+}
+
 h1,
 h2,
 h3,
@@ -376,9 +418,22 @@ select {
   box-shadow: 0 10px 24px rgba(35, 65, 31, 0.06);
 }
 
+.profile-emoji {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 4px;
+  border-radius: 15px;
+  font-size: 1.45rem;
+}
+
 .starter-profile span {
   color: #5e684f;
   font-size: 0.92rem;
+}
+
+.starter-profile .profile-emoji {
+  color: inherit;
+  font-size: 1.45rem;
 }
 
 .onboarding-panel h2 {
@@ -419,8 +474,16 @@ select {
 .recommendation-topline {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   margin-bottom: 10px;
+}
+
+.card-emoji {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  font-size: 1.05rem;
 }
 
 .subtle-pill {

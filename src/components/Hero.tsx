@@ -16,6 +16,12 @@ export function Hero({ region, weather, weatherError, summary }: Props) {
       <div className="hero-copy">
         <p className="eyebrow">Moj vrt</p>
         <h1>Kaj danes na vrtu?</h1>
+        <div className="garden-emoji-strip" aria-label="vrtni poudarki">
+          <span role="img" aria-label="sadika">🌱</span>
+          <span role="img" aria-label="zalivanje">💧</span>
+          <span role="img" aria-label="sonce">☀️</span>
+          <span role="img" aria-label="rastlina v loncu">🪴</span>
+        </div>
         <div className="daily-summary">
           <strong>{summary.title}</strong>
           <p>{summary.body}</p>
