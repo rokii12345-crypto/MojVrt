@@ -1,0 +1,5 @@
+garden_type_id,name,description,data_use
+klasicni_vrt,Klasični vrt,"Greda v zemlji, največ možnosti za večje rastline.","privzeto; upoštevaj tla, kolobar in razdalje"
+visoka_greda,Visoka greda,"Hitreje se ogreje, dobra za začetnike, zahteva redno zalivanje.",filtriraj rastline z raised_bed=true
+balkon,Balkon / terasa,"Lonci, korita in večje posode; pomembni so volumen posode, voda in sonce.",filtriraj rastline z balcony=true
+rastlinjak,Rastlinjak / tunel,Podaljša sezono in pomaga toploljubnim rastlinam; večje tveganje za bolezni ob slabi zračnosti.,za plodovke in zgodnje sadike dodaj opozorila glede zračenja

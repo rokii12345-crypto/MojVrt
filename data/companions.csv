@@ -1,0 +1,244 @@
+plant_id,companion_name,relationship_type,note,verification_status,confidence,source_ids
+paradiznik,bazilika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paradiznik,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paradiznik,korenček,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paradiznik,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paradiznik,peteršilj,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paradiznik,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paradiznik,komarček,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paprika,bazilika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paprika,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paprika,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paprika,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paprika,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+paprika,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cili,bazilika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cili,origano,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cili,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cili,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cili,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,grah,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,koper,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kumare,žajbelj,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bucke,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bucke,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bucke,kapucinka,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bucke,redkvica,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bucke,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jajcevec,bazilika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jajcevec,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jajcevec,stročnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jajcevec,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jajcevec,paradižnik kot zaporedni posevek,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+buce,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+buce,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+buce,kapucinka,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+buce,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+lubenica,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+lubenica,redkvica,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+lubenica,kapucinka,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+lubenica,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+solata,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+solata,redkvica,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+solata,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+solata,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+solata,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+radic,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+radic,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+radic,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+radic,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+radic,endivija kot bližnji sorodnik v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+endivija,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+endivija,zelje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+endivija,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+endivija,radič kot sorodnik v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+spinaca,jagode,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+spinaca,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+spinaca,grah,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+spinaca,redkvica,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+spinaca,rdeča pesa,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+spinaca,blitva v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+blitva,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+blitva,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+blitva,kapusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+blitva,rdeča pesa in špinača v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+motovilec,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+motovilec,zelje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+motovilec,paradižnik po pobiranju,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rukola,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rukola,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rukola,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rukola,kapusnice v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+korenje,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+korenje,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+korenje,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+korenje,grah,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+korenje,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+petersilj_koren,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+petersilj_koren,drobnjak,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+petersilj_koren,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rdeca_pesa,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rdeca_pesa,kolerabica,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rdeca_pesa,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rdeca_pesa,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rdeca_pesa,špinača,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rdeca_pesa,blitva v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+redkvica,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+redkvica,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+redkvica,grah,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+redkvica,kumare,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+redkvica,kapusnice v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+pastinak,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+pastinak,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+pastinak,grah,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+pastinak,korenje v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+krompir,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+krompir,zelje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+krompir,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+krompir,paradižnik,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+krompir,paprika,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+krompir,jajčevec,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+gomoljna_zelena,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+gomoljna_zelena,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+gomoljna_zelena,kapusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+gomoljna_zelena,korenje,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+gomoljna_zelena,peteršilj v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,kumare,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,zelje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,šetraj,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,čebula,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,česen,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,por,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_nizek,grah,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,koruza,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,kumare,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,zelje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,šetraj,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,čebula,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,česen,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+fizol_visok,por,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,redkvica,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,kumare,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,kapusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,čebula,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,česen,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,por,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+grah,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bob,krompir,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bob,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bob,špinača,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bob,čebula,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bob,česen,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bob,por,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+zelje,zelena,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+zelje,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+zelje,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+zelje,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+zelje,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+zelje,jagode,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brokoli,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brokoli,zelena,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brokoli,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brokoli,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brokoli,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brokoli,jagode; kapusnice v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cvetača,zelena,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cvetača,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cvetača,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cvetača,jagode; kapusnice v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ohrovt,zelena,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ohrovt,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ohrovt,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ohrovt,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ohrovt,kapusnice v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kolerabica,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kolerabica,grah,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kolerabica,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kolerabica,rdeča pesa,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kolerabica,zelje kot bližnji sorodnik v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brsticni_ohrovt,zelena,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brsticni_ohrovt,por,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brsticni_ohrovt,krompir,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+brsticni_ohrovt,kapusnice v kolobarju,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cebula,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cebula,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cebula,rdeča pesa,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cebula,jagode,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cebula,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cebula,grah,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cesen,jagode,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cesen,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cesen,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cesen,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cesen,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+cesen,grah,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+por,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+por,zelena,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+por,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+por,kapusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+por,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+por,grah,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+salotka,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+salotka,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+salotka,jagode,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+salotka,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+salotka,grah,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bazilika,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bazilika,paprika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+bazilika,origano,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+petersilj_list,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+petersilj_list,drobnjak,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+petersilj_list,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+drobnjak,korenje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+drobnjak,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+drobnjak,jagode,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+drobnjak,fižol,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+drobnjak,grah,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+meta,neposredno v gredo brez omejitve,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+timijan,kapusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+timijan,jagode,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+timijan,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+timijan,vlažna težka tla,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rozmarin,žajbelj,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rozmarin,timijan,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rozmarin,kapusnice po nekaterih virih,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+rozmarin,zelo vlažna tla,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+origano,paprika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+origano,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+origano,bazilika,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+origano,zelo mokra tla,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+koper,kumare,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+koper,zelje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+koper,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+koper,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jagode,česen,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jagode,čebula,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jagode,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+jagode,drobnjak,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+maline,česen,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+maline,drobnjak,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+maline,ognjič,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+maline,krompir,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+borovnice,brusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+borovnice,azaleje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+borovnice,kislo-ljubne rastline,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+borovnice,apnenčasta tla,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+borovnice,bližina močno alkalnih dodatkov,slab,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,nizka-srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ribez,drobnjak,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ribez,ognjič,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ognjic,paradižnik,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ognjic,kapusnice,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+ognjic,solata,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kapucinka,bučke,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kapucinka,kumare,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kapucinka,fižol,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED
+kapucinka,sadno drevje,dober,Splošna vrtnarska praksa; pred produkcijo preveri v slovenskem viru.,splošno sprejeto / potrebno preveriti,srednja,KGZS_EKNJIZNICA;SEMENARNA_KATALOG;VERIFY_NEEDED

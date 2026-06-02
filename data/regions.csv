@@ -1,0 +1,7 @@
+region_id,name,climate_note,calendar_adjustment,warning,confidence
+osrednja_slovenija,Osrednja Slovenija,privzeti celinski okvir za MVP,osnovni razpon,"Mikroklima se lahko močno razlikuje med mestom, dolino in višjo lego.",srednja
+primorska,Primorska / Obala,"toplejša in zgodnejša sezona, manj pozebe, več poletne suše",toploljubne rastline pogosto 2–4 tedne prej; poleti več poudarka na suši,"Voda, veter in slanost so lahko pomembni; preveri lokalno mikroklimo.",srednja
+gorenjska_visje_lege,Gorenjska in višje lege,hladnejša in krajša sezona,toploljubne rastline pogosto 2–4 tedne pozneje,Večja nevarnost poznih spomladanskih in zgodnjih jesenskih slan.,srednja
+severovzhodna_slovenija,Severovzhodna Slovenija,"celinski vpliv, poletna suša in vročina sta lahko izraziti",osnovni razpon; spremljaj sušo in temperaturo tal,Uporabljaj ARSO/Agromet za sušo in tla.,srednja
+jugovzhodna_slovenija,Jugovzhodna Slovenija,"celinski okvir, lahko zelo topla poletja","osnovni razpon, s prilagoditvijo mikroklimi","Spremljaj sušo, točo in pozebo.",srednja
+pomurje_podravje,Pomurje / Podravje,"topla poletja, možne suše, dobra pridelovalna območja","spomladi pogosto zgodnejše od hladnih leg, vendar preveri tla",Spremljaj temperaturo tal in sušni bilten.,srednja

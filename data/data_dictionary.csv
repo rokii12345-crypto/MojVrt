@@ -1,0 +1,23 @@
+table,column,description,required_for_mvp
+plants,id,"strojni ID rastline; brez šumnikov, za URL in povezave med tabelami",da
+plants,slovensko_ime,ime rastline za prikaz uporabniku,da
+plants,latinsko_ime,"botanično ime; pri nekaterih skupinah splošno, potrebno dodatno preveriti",ne
+plants,skupina,glavna skupina za filtriranje,da
+plants,mvp_priority,"1 = prvo za MVP, 5 = kasneje",da
+plants,beginner,primerno za začetnike,ne
+plants,balcony,primerno za balkon/lonec,ne
+plants,raised_bed,primerno za visoko gredo,ne
+plants,difficulty,zahtevnost 1–5,ne
+plants,indoor,splošen razpon setve v notranjih prostorih,da
+plants,outdoor,splošen razpon setve na prosto,da
+plants,transplant,splošen razpon presajanja,da
+plants,harvest,splošen razpon obiranja,da
+plants,confidence,zanesljivost trenutnega zapisa: nizka/srednja/visoka,da
+plants,source_ids,povezava na sources.csv,ne
+calendar_tasks,plant_id,povezava na plants.id,da
+calendar_tasks,month,mesec 1–12,da
+calendar_tasks,task_type,"setev_notri, setev_na_prosto, presajanje, obiranje, nega",da
+calendar_tasks,task_title,kratek naslov opravila,da
+calendar_tasks,task_description,poljuden opis opravila,da
+calendar_tasks,region_adjustment,opomba za regije in mikroklimo,da
+calendar_tasks,verification_status,uredniški status podatka,da

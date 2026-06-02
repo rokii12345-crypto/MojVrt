@@ -1,0 +1,92 @@
+[
+  {
+    "source_id": "KIS",
+    "name": "Kmetijski inštitut Slovenije",
+    "type": "slovenski strokovni vir",
+    "url": "https://www.kis.si/",
+    "use_for": "strokovna osnova, rastlinska pridelava, vrtnarstvo, varstvo rastlin, sorte, semenski material",
+    "license_note": "Ne kopiraj celotnih besedil; uporabi kot referenco in citiraj vir.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "KGZS_EKNJIZNICA",
+    "name": "KGZS E-knjižnica",
+    "type": "slovenski strokovno-praktični vir",
+    "url": "https://www.kgzs.si/kgzs/kmetijsko-svetovanje/e-knjiznica",
+    "use_for": "praktični nasveti, setev, sadike, plodovke, fižol, sosedje, suša, toča",
+    "license_note": "Preveri pogoje uporabe; ne kopiraj člankov, strukturiraj lastne povzetke in citiraj vir.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "IVR",
+    "name": "Integrirano varstvo rastlin",
+    "type": "slovenski strokovni vir",
+    "url": "https://www.ivr.si/",
+    "use_for": "bolezni, škodljivci, preventivni ukrepi, integrirano varstvo rastlin",
+    "license_note": "Uporabi kot strokovno referenco, citiraj URL, ne kopiraj besedil.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "GOV_PROGNOZA",
+    "name": "Javna služba zdravstvenega varstva rastlin / prognostična obvestila",
+    "type": "uradni slovenski vir",
+    "url": "https://www.gov.si/teme/javna-sluzba-zdravstvenega-varstva-rastlin/",
+    "use_for": "opozorila glede bolezni in škodljivcev po regijah, sezonska opozorila",
+    "license_note": "Uradni vir; citiraj in preverjaj aktualnost ob mesečnih posodobitvah.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "ARSO_AGROMET",
+    "name": "ARSO / meteo.si Agrometeorologija",
+    "type": "uradni slovenski vir",
+    "url": "https://meteo.arso.gov.si/met/sl/agromet/",
+    "use_for": "suša, pozeba, hidrometeorološke razmere, fenološki razvoj, agrometeorološki podatki",
+    "license_note": "Preveri pogoje uporabe ARSO podatkov; za aplikacijo raje povezuj ali agregiraj z navedbo vira.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "ARSO_TLA",
+    "name": "ARSO temperature tal",
+    "type": "uradni slovenski vir",
+    "url": "https://meteo.arso.gov.si/met/sl/agromet/recent/tsoil/",
+    "use_for": "temperatura tal v globini 5 in 10 cm, opozorila pri setvi na prosto",
+    "license_note": "Preveri pogoje uporabe; podatke navaj z virom in datumom osvežitve.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "MKGP_IPZ",
+    "name": "Tehnološka navodila za integrirano pridelavo zelenjave",
+    "type": "uradni/strokovni vir",
+    "url": "https://www.gov.si/teme/integrirana-pridelava/",
+    "use_for": "strokovni okvir pridelave zelenjave, varstvo rastlin, priporočila in zahteve",
+    "license_note": "Namenjeno predvsem profesionalnim pridelovalcem; za ljubitelje prilagodi jezik in citiraj vir.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "SKP_SEMENA",
+    "name": "Pridelava semena zelenjadnic, MKGP priročnik",
+    "type": "uradni/strokovni priročnik",
+    "url": "https://skp.si/download/pridelava-semena-zelenjadnic",
+    "use_for": "botanične družine, semenarstvo, splošna tehnologija zelenjadnic",
+    "license_note": "Uporabi kot referenco, ne kopiraj besedil.",
+    "reliability": "visoka"
+  },
+  {
+    "source_id": "SEMENARNA_KATALOG",
+    "name": "Semenarna Ljubljana, vrtni katalog",
+    "type": "slovenski semenarski/praktični vir",
+    "url": "https://www.semenarna.si/files/files/Veliki%20vrtni%20katalog_2025.pdf",
+    "use_for": "sorte, praktična navodila, sosedje, razdalje, semena",
+    "license_note": "Komercialni katalog; ne kopiraj opisov/sortnih besedil, uporabi le kot referenco in za ročno preverbo.",
+    "reliability": "srednja-visoka"
+  },
+  {
+    "source_id": "VERIFY_NEEDED",
+    "name": "Vir potreben / potrebno ročno preveriti",
+    "type": "status",
+    "url": "",
+    "use_for": "polja, ki jih je treba pred produkcijo preveriti v strokovnem slovenskem viru",
+    "license_note": "Ni vir; status za uredniški proces.",
+    "reliability": "nizka"
+  }
+]
