@@ -1,4 +1,4 @@
-import type { CalendarTask, GardenType, Plant, Recommendation, Region, WeatherDay, WeatherSnapshot } from "../types";
+import type { CalendarTask, DailySummary, GardenType, Plant, Recommendation, Region, WeatherDay, WeatherSnapshot } from "../types";
 
 function priorityRank(priority: string): number {
   if (priority === "visoka") return 0;
@@ -61,10 +61,64 @@ export function getMonthlyTasksForSelection(args: {
 
 export function getWeatherRecommendations(weather: WeatherSnapshot | null, region: Region): Recommendation[] {
   if (!weather) return [];
-  return buildWeatherRecommendationsForDay(weather.today, region, "weather-today");
+  const recommendations = buildWeatherRecommendationsForDay(weather.today, region, "weather-today", weather.currentHumidity);
+  const tomorrow = weather.days[1];
+
+  if (tomorrow) {
+    const tomorrowRain = tomorrow.precipitationSum ?? 0;
+    const tomorrowRainProbability = tomorrow.precipitationProbabilityMax ?? 0;
+    if (tomorrowRain >= 5 || tomorrowRainProbability >= 70) {
+      recommendations.push(weatherRecommendation({
+        id: "weather-tomorrow-rain",
+        title: "Jutri kaže na dež: danes pripravi vrt",
+        body: "Danes lahko pobereš občutljive plodove, utrdiš opore in preskočiš močno zalivanje. Setev ali presajanje načrtuj z mislijo na mokra tla.",
+        type: "weather",
+        priority: "srednja"
+      }));
+    }
+  }
+
+  const dryDays = weather.days.slice(0, 5).filter((day) => {
+    const rain = day.precipitationSum ?? 0;
+    const probability = day.precipitationProbabilityMax ?? 0;
+    return rain < 2 && probability < 45;
+  }).length;
+
+  if (dryDays >= 4) {
+    recommendations.push(weatherRecommendation({
+      id: "weather-dry-spell",
+      title: "Več zaporednih suhih dni: spremljaj vlago v zemlji",
+      body: "Visoke grede, lonci in sveže setve se hitreje izsušijo. Zalivaj zjutraj ali zvečer in preveri zemljo nekaj centimetrov pod površino.",
+      type: "weather",
+      priority: "srednja"
+    }));
+  }
+
+  const wetDiseaseRisk = weather.days.slice(0, 3).some((day) => (day.precipitationSum ?? 0) >= 4 || (day.precipitationProbabilityMax ?? 0) >= 75);
+  if ((weather.currentHumidity ?? 0) >= 85 || wetDiseaseRisk) {
+    recommendations.push(weatherRecommendation({
+      id: "weather-humidity-disease-risk",
+      title: "Vlaga: spremljaj bolezni na listih",
+      body: "Po mokrem ali zelo vlažnem vremenu preglej paradižnik, kumare, bučke, solato in jagode. Zalivaj ob korenini in poskrbi za zračnost rastlin.",
+      type: "watch",
+      priority: "srednja"
+    }));
+  }
+
+  return sortRecommendations(recommendations).slice(0, 8);
 }
 
-export function buildWeatherRecommendationsForDay(day: WeatherDay, region: Region, prefix = "weather"): Recommendation[] {
+function weatherRecommendation(args: Pick<Recommendation, "id" | "title" | "body" | "type" | "priority">): Recommendation {
+  return {
+    ...args,
+    source: "weather",
+    confidence: "srednja",
+    verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
+    source_ids: "OPEN_METEO"
+  };
+}
+
+export function buildWeatherRecommendationsForDay(day: WeatherDay, region: Region, prefix = "weather", humidity?: number): Recommendation[] {
   const recommendations: Recommendation[] = [];
   const min = day.minTemperature ?? 99;
   const max = day.maxTemperature ?? -99;
@@ -73,88 +127,74 @@ export function buildWeatherRecommendationsForDay(day: WeatherDay, region: Regio
   const wind = day.windSpeedMax ?? 0;
 
   if (min <= 3) {
-    recommendations.push({
+    recommendations.push(weatherRecommendation({
       id: `${prefix}-frost`,
       title: "Nevarnost slane ali hladnega stresa",
       body: "Ne presajaj toploljubnih rastlin na prosto. Mlade sadike zaščiti s kopreno, tunelom ali jih čez noč prestavi v zavetje.",
       type: "wait",
-      priority: "visoka",
-      source: "weather",
-      confidence: "srednja",
-      verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
-      source_ids: "OPEN_METEO"
-    });
+      priority: "visoka"
+    }));
   }
 
   if (max >= 30) {
-    recommendations.push({
+    recommendations.push(weatherRecommendation({
       id: `${prefix}-heat`,
       title: "Vroč dan: zalivaj zgodaj ali zvečer",
       body: "Raje ne presajaj opoldne. Posode in visoke grede se hitro izsušijo; preveri vlago zemlje s prstom.",
       type: "weather",
-      priority: "visoka",
-      source: "weather",
-      confidence: "srednja",
-      verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
-      source_ids: "OPEN_METEO"
-    });
+      priority: "visoka"
+    }));
   } else if (max >= 26 && rain < 2) {
-    recommendations.push({
+    recommendations.push(weatherRecommendation({
       id: `${prefix}-warm-dry`,
       title: "Toplo in suho: preveri zalivanje",
       body: "Predvsem lonci, balkon in visoka greda potrebujejo redno kontrolo vlage. Zalivaj ob korenini, ne po listih.",
       type: "do",
-      priority: "srednja",
-      source: "weather",
-      confidence: "srednja",
-      verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
-      source_ids: "OPEN_METEO"
-    });
+      priority: "srednja"
+    }));
   }
 
-  if (rainProbability >= 70 || rain >= 5) {
-    recommendations.push({
+  if (rainProbability >= 70 || rain >= 5 || (day.date && rain > 0 && prefix.includes("today"))) {
+    recommendations.push(weatherRecommendation({
       id: `${prefix}-rain`,
       title: "Dež: preskoči rutinsko zalivanje",
       body: "Dan je bolj primeren za pregled rastlin, vezanje opor, setev v notranjih prostorih ali pripravo orodja. Po dežju spremljaj bolezni na listih.",
       type: "watch",
-      priority: "srednja",
-      source: "weather",
-      confidence: "srednja",
-      verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
-      source_ids: "OPEN_METEO"
-    });
+      priority: rain >= 5 || rainProbability >= 70 ? "srednja" : "nizka"
+    }));
   }
 
   if (wind >= 35) {
-    recommendations.push({
+    recommendations.push(weatherRecommendation({
       id: `${prefix}-wind`,
       title: "Vetrovno: utrdi opore in ne škropi",
       body: "Preveri paradižnik, fižol, kumare in mlade sadike. Delo s škropivi in listnimi pripravki preloži.",
       type: "wait",
-      priority: "srednja",
-      source: "weather",
-      confidence: "srednja",
-      verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
-      source_ids: "OPEN_METEO"
-    });
+      priority: "srednja"
+    }));
+  }
+
+  if ((humidity ?? 0) >= 85 || (rain >= 3 && max >= 18)) {
+    recommendations.push(weatherRecommendation({
+      id: `${prefix}-leaf-disease-risk`,
+      title: "Vlažno vreme: preglej liste",
+      body: "Pri gosti zasaditvi in mokrih listih spremljaj prve znake pegavosti, plesni ali gnitja. Ne zalivaj po listih.",
+      type: "watch",
+      priority: "srednja"
+    }));
   }
 
   if (recommendations.length === 0) {
-    recommendations.push({
+    recommendations.push(weatherRecommendation({
       id: `${prefix}-good-day`,
       title: "Dober dan za običajna vrtna opravila",
       body: `V regiji ${region.name} vreme ne kaže večjih opozoril. Izberi opravila po mesečnem koledarju in preveri stanje zemlje pred zalivanjem.`,
       type: "do",
-      priority: "nizka",
-      source: "weather",
-      confidence: "srednja",
-      verification_status: "vremenska ocena iz javne napovedi; preveri lokalno mikroklimo",
-      source_ids: "OPEN_METEO"
-    });
+      priority: "nizka"
+    }));
   }
 
-  return recommendations;
+  return sortRecommendations(recommendations);
 }
 
 export function mergeTodayRecommendations(calendar: Recommendation[], weather: Recommendation[]): Recommendation[] {
@@ -173,7 +213,57 @@ export function mergeTodayRecommendations(calendar: Recommendation[], weather: R
     return item;
   });
 
-  return [...urgentWeather, ...safeCalendar, ...weather.filter((item) => !urgentWeather.includes(item))]
-    .sort((a, b) => priorityRank(a.priority) - priorityRank(b.priority))
+  return sortRecommendations([...urgentWeather, ...safeCalendar, ...weather.filter((item) => !urgentWeather.includes(item))])
     .slice(0, 20);
+}
+
+export function buildDailySummary(args: {
+  weather: WeatherSnapshot | null;
+  region: Region;
+  doCount: number;
+  waitCount: number;
+  watchCount: number;
+  selectedPlantCount: number;
+}): DailySummary {
+  if (!args.weather) {
+    return {
+      title: "Nalagam današnjo vremensko sliko",
+      body: "Ko bo napoved naložena, bo dashboard razvrstil opravila po tem, kaj je danes smiselno narediti, prestaviti ali samo spremljati.",
+      tone: "weather"
+    };
+  }
+
+  if (args.selectedPlantCount === 0) {
+    return {
+      title: "Najprej izberi svoje rastline",
+      body: `Za ${args.region.name} že spremljam vreme, ko pa izbereš rastline, bom dodal koledarska opravila za današnji mesec.`,
+      tone: "weather"
+    };
+  }
+
+  if (args.waitCount > 0) {
+    return {
+      title: "Danes delaj previdno",
+      body: `Na vrtu je ${args.waitCount} vremensko tveganje. Začni z varnimi opravili, presajanje in delo z občutljivimi rastlinami pa preveri v razdelku Raje počakaj.`,
+      tone: "caution"
+    };
+  }
+
+  if (args.doCount > 0) {
+    return {
+      title: "Danes je dober dan za vrt",
+      body: `Za tvoj izbor imam ${args.doCount} predlogov za danes. Vreme ne kaže večjih omejitev, vseeno preveri vlago zemlje in stanje rastlin.`,
+      tone: "good"
+    };
+  }
+
+  return {
+    title: "Danes predvsem opazuj",
+    body: `Za izbrane rastline ni veliko nujnih opravil. Spremljaj vreme, vlago zemlje in morebitne znake bolezni ali škodljivcev.`,
+    tone: args.watchCount > 0 ? "weather" : "good"
+  };
+}
+
+function sortRecommendations(recommendations: Recommendation[]): Recommendation[] {
+  return recommendations.sort((a, b) => priorityRank(a.priority) - priorityRank(b.priority));
 }

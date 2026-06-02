@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import plantsRaw from "./data/plants.json";
 import tasksRaw from "./data/calendar_tasks.json";
-import type { CalendarTask, Plant, WeatherSnapshot } from "./types";
+import type { CalendarTask, Plant, UserExperience, WeatherSnapshot } from "./types";
 import { regions, gardenTypes } from "./data/regions";
 import { getCurrentMonthNumber, getMonthName } from "./lib/date";
 import { fetchWeather } from "./lib/weatherApi";
-import { getMonthlyTasksForSelection, getWeatherRecommendations, mergeTodayRecommendations } from "./lib/recommendations";
+import { buildDailySummary, getMonthlyTasksForSelection, getWeatherRecommendations, mergeTodayRecommendations } from "./lib/recommendations";
 import { Controls } from "./components/Controls";
 import { ForecastStrip } from "./components/ForecastStrip";
 import { Footer } from "./components/Footer";
@@ -24,6 +24,7 @@ type SavedSettings = {
   selectedMonth: number;
   selectedPlantIds: string[];
   highPriorityOnly: boolean;
+  experience: UserExperience;
 };
 
 const defaultSettings: SavedSettings = {
@@ -31,7 +32,8 @@ const defaultSettings: SavedSettings = {
   selectedGardenTypeId: "visoka_greda",
   selectedMonth: getCurrentMonthNumber(),
   selectedPlantIds: [],
-  highPriorityOnly: false
+  highPriorityOnly: false,
+  experience: "zacetnik"
 };
 
 function loadSavedSettings(): SavedSettings {
@@ -46,7 +48,8 @@ function loadSavedSettings(): SavedSettings {
       selectedGardenTypeId: parsed.selectedGardenTypeId ?? defaultSettings.selectedGardenTypeId,
       selectedMonth: parsed.selectedMonth ?? defaultSettings.selectedMonth,
       selectedPlantIds: Array.isArray(parsed.selectedPlantIds) ? parsed.selectedPlantIds : defaultSettings.selectedPlantIds,
-      highPriorityOnly: parsed.highPriorityOnly ?? defaultSettings.highPriorityOnly
+      highPriorityOnly: parsed.highPriorityOnly ?? defaultSettings.highPriorityOnly,
+      experience: parsed.experience ?? defaultSettings.experience
     };
   } catch {
     return defaultSettings;
@@ -60,6 +63,7 @@ function App() {
   const [selectedMonth, setSelectedMonth] = useState(savedSettings.selectedMonth);
   const [selectedPlantIds, setSelectedPlantIds] = useState<string[]>(savedSettings.selectedPlantIds);
   const [highPriorityOnly, setHighPriorityOnly] = useState(savedSettings.highPriorityOnly);
+  const [experience, setExperience] = useState<UserExperience>(savedSettings.experience);
   const [weather, setWeather] = useState<WeatherSnapshot | null>(null);
   const [weatherError, setWeatherError] = useState<string | null>(null);
 
@@ -73,9 +77,10 @@ function App() {
       selectedGardenTypeId,
       selectedMonth,
       selectedPlantIds,
-      highPriorityOnly
+      highPriorityOnly,
+      experience
     }));
-  }, [highPriorityOnly, selectedGardenTypeId, selectedMonth, selectedPlantIds, selectedRegionId]);
+  }, [experience, highPriorityOnly, selectedGardenTypeId, selectedMonth, selectedPlantIds, selectedRegionId]);
 
   useEffect(() => {
     let cancelled = false;
@@ -107,9 +112,10 @@ function App() {
         month: selectedMonth
       });
 
-      return highPriorityOnly ? recommendations.filter((item) => item.priority === "visoka") : recommendations;
+      const filtered = highPriorityOnly ? recommendations.filter((item) => item.priority === "visoka") : recommendations;
+      return experience === "zacetnik" ? filtered.slice(0, 10) : filtered;
     },
-    [highPriorityOnly, selectedGardenType, selectedMonth, selectedPlantIds]
+    [experience, highPriorityOnly, selectedGardenType, selectedMonth, selectedPlantIds]
   );
 
   const weatherRecommendations = useMemo(
@@ -137,6 +143,18 @@ function App() {
     [todayRecommendations]
   );
 
+  const dailySummary = useMemo(
+    () => buildDailySummary({
+      weather,
+      region: selectedRegion,
+      doCount: doRecommendations.length,
+      waitCount: waitRecommendations.length,
+      watchCount: watchRecommendations.length,
+      selectedPlantCount: selectedPlantIds.length
+    }),
+    [doRecommendations.length, selectedPlantIds.length, selectedRegion, waitRecommendations.length, watchRecommendations.length, weather]
+  );
+
   function togglePlant(id: string) {
     setSelectedPlantIds((current) =>
       current.includes(id) ? current.filter((item) => item !== id) : [...current, id]
@@ -149,7 +167,7 @@ function App() {
 
   return (
     <div className="app-shell">
-      <Hero region={selectedRegion} weather={weather} weatherError={weatherError} />
+      <Hero region={selectedRegion} weather={weather} weatherError={weatherError} summary={dailySummary} />
 
       <main>
         <div className="layout">
@@ -162,12 +180,14 @@ function App() {
             selectedMonth={selectedMonth}
             selectedPlantIds={selectedPlantIds}
             highPriorityOnly={highPriorityOnly}
+            experience={experience}
             onRegionChange={setSelectedRegionId}
             onGardenTypeChange={setSelectedGardenTypeId}
             onMonthChange={setSelectedMonth}
             onPlantToggle={togglePlant}
             onSelectStarterPlants={selectStarterPlants}
             onHighPriorityOnlyChange={setHighPriorityOnly}
+            onExperienceChange={setExperience}
           />
 
           <div className="dashboard-column">
@@ -187,7 +207,7 @@ function App() {
             <RecommendationList
               eyebrow="Danes naredi"
               title="Najbolj smiselna opravila"
-              subtitle={`Priporočila za ${selectedRegion.name}, ${selectedGardenType.name.toLowerCase()} in mesec ${getMonthName(selectedMonth)}.`}
+              subtitle={`Priporočila za ${selectedRegion.name}, ${selectedGardenType.name.toLowerCase()} in mesec ${getMonthName(selectedMonth)}. Razponi so mesečni, ne točni datumi.`}
               recommendations={doRecommendations}
               emptyMessage={hasSelectedPlants ? "Za izbrane rastline danes ni varnega opravila v tej skupini. Poglej opozorila in 7-dnevni pogled." : "Izberi rastline, da se prikažejo današnja koledarska opravila."}
             />
@@ -222,7 +242,7 @@ function App() {
           </div>
         </div>
 
-        <ForecastStrip weather={weather} region={selectedRegion} />
+        <ForecastStrip weather={weather} region={selectedRegion} monthlyTasks={calendarRecommendations} />
       </main>
 
       <Footer />

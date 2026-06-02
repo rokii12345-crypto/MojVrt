@@ -1,4 +1,4 @@
-import type { GardenType, Plant, Region } from "../types";
+import type { GardenType, Plant, Region, UserExperience } from "../types";
 import { getMonthName } from "../lib/date";
 
 type Props = {
@@ -10,12 +10,14 @@ type Props = {
   selectedMonth: number;
   selectedPlantIds: string[];
   highPriorityOnly: boolean;
+  experience: UserExperience;
   onRegionChange: (id: string) => void;
   onGardenTypeChange: (id: string) => void;
   onMonthChange: (month: number) => void;
   onPlantToggle: (id: string) => void;
   onSelectStarterPlants: () => void;
   onHighPriorityOnlyChange: (value: boolean) => void;
+  onExperienceChange: (value: UserExperience) => void;
 };
 
 export function Controls(props: Props) {
@@ -55,6 +57,14 @@ export function Controls(props: Props) {
             {Array.from({ length: 12 }, (_, index) => index + 1).map((month) => (
               <option key={month} value={month}>{getMonthName(month)}</option>
             ))}
+          </select>
+        </label>
+
+        <label>
+          <span>Izkušnje</span>
+          <select value={props.experience} onChange={(event) => props.onExperienceChange(event.target.value as UserExperience)}>
+            <option value="zacetnik">Začetnik</option>
+            <option value="nekaj_izkusenj">Nekaj izkušenj</option>
           </select>
         </label>
 

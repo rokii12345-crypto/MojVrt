@@ -1,4 +1,4 @@
-import type { Region, WeatherSnapshot } from "../types";
+import type { DailySummary, Region, WeatherSnapshot } from "../types";
 import { formatDateSl } from "../lib/date";
 import { describeWeatherCode, weatherEmoji } from "../lib/weatherDescriptions";
 
@@ -6,20 +6,22 @@ type Props = {
   region: Region;
   weather: WeatherSnapshot | null;
   weatherError: string | null;
+  summary: DailySummary;
 };
 
-export function Hero({ region, weather, weatherError }: Props) {
+export function Hero({ region, weather, weatherError, summary }: Props) {
   const today = weather?.today;
   return (
-    <header className="hero">
+    <header className={`hero ${summary.tone}`}>
       <div className="hero-copy">
         <p className="eyebrow">Moj vrt</p>
         <h1>Kaj danes na vrtu?</h1>
-        <p className="hero-text">
-          Dnevni vrtnarski dashboard za začetnike: združi mesečni koledar, tvoje rastline, tip vrta in javno vremensko napoved.
-        </p>
+        <div className="daily-summary">
+          <strong>{summary.title}</strong>
+          <p>{summary.body}</p>
+        </div>
         <div className="source-note">
-          Vreme: Open-Meteo, lokacija za regijo: {region.weatherName}. Nasveti so informativni in jih prilagodi svoji mikroklimi.
+          Vreme: Open-Meteo Forecast API, referenčna lokacija {region.weatherName}. Nasveti so informativni in niso strokovno jamstvo.
         </div>
       </div>
 

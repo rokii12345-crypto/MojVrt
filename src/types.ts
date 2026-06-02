@@ -1,4 +1,5 @@
 export type Confidence = "nizka" | "srednja" | "visoka" | string;
+export type UserExperience = "zacetnik" | "nekaj_izkusenj";
 
 export type Plant = {
   id: string;
@@ -94,4 +95,10 @@ export type Recommendation = {
   confidence?: Confidence;
   verification_status?: string;
   source_ids?: string;
+};
+
+export type DailySummary = {
+  title: string;
+  body: string;
+  tone: "good" | "caution" | "weather";
 };

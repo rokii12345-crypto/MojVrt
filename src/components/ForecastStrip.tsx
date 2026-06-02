@@ -1,4 +1,4 @@
-import type { Region, WeatherSnapshot } from "../types";
+import type { Recommendation, Region, WeatherSnapshot } from "../types";
 import { buildWeatherRecommendationsForDay } from "../lib/recommendations";
 import { formatDateSl } from "../lib/date";
 import { describeWeatherCode, weatherEmoji } from "../lib/weatherDescriptions";
@@ -6,9 +6,16 @@ import { describeWeatherCode, weatherEmoji } from "../lib/weatherDescriptions";
 type Props = {
   weather: WeatherSnapshot | null;
   region: Region;
+  monthlyTasks: Recommendation[];
 };
 
-export function ForecastStrip({ weather, region }: Props) {
+function dayLabel(advice: Recommendation[]): string {
+  if (advice.some((item) => item.type === "wait")) return "Previdno";
+  if (advice.some((item) => item.type === "weather" || item.type === "watch")) return "Spremljaj";
+  return "Primerno";
+}
+
+export function ForecastStrip({ weather, region, monthlyTasks }: Props) {
   if (!weather) {
     return (
       <section className="panel">
@@ -27,14 +34,22 @@ export function ForecastStrip({ weather, region }: Props) {
       <div className="forecast-grid">
         {weather.days.map((day) => {
           const dailyAdvice = buildWeatherRecommendationsForDay(day, region, `day-${day.date}`);
+          const label = dayLabel(dailyAdvice);
+          const suggestedTask = dailyAdvice.some((item) => item.type === "wait")
+            ? "Preloži občutljiva opravila"
+            : monthlyTasks.find((task) => task.type === "do")?.title ?? monthlyTasks[0]?.title ?? "Preglej vrt in vlago zemlje";
           return (
             <article key={day.date} className="forecast-day">
-              <div className="forecast-date">{formatDateSl(day.date)}</div>
+              <div className="forecast-date">
+                <span>{formatDateSl(day.date)}</span>
+                <strong className={`day-label ${label === "Previdno" ? "caution" : label === "Spremljaj" ? "watch" : "good"}`}>{label}</strong>
+              </div>
               <div className="forecast-icon">{weatherEmoji(day.weatherCode)}</div>
               <strong>{describeWeatherCode(day.weatherCode)}</strong>
               <span>{day.minTemperature ?? "–"}–{day.maxTemperature ?? "–"} °C</span>
               <span>{day.precipitationProbabilityMax ?? "–"}% dež · {day.precipitationSum ?? "–"} mm</span>
               <span>{day.windSpeedMax ?? "–"} km/h veter</span>
+              <p className="forecast-task">{suggestedTask}</p>
               <ul className="forecast-advice">
                 {dailyAdvice.slice(0, 2).map((advice) => (
                   <li key={advice.id}>{advice.title}</li>

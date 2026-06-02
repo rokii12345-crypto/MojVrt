@@ -66,6 +66,19 @@ button {
   overflow: hidden;
 }
 
+.hero.good .hero-copy {
+  background: #fffff7;
+}
+
+.hero.caution .hero-copy {
+  border-color: rgba(201, 121, 69, 0.26);
+  background: #fffaf1;
+}
+
+.hero.weather .hero-copy {
+  background: #f8fcf1;
+}
+
 .eyebrow {
   margin: 0 0 8px;
   text-transform: uppercase;
@@ -101,6 +114,25 @@ h2 {
   max-width: 720px;
   font-size: 1.15rem;
   color: #51624b;
+}
+
+.daily-summary {
+  display: grid;
+  gap: 8px;
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.daily-summary strong {
+  color: var(--green-950);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.daily-summary p {
+  margin: 0;
+  color: #51624b;
+  font-size: 1.08rem;
 }
 
 .source-note,
@@ -436,10 +468,36 @@ select {
 }
 
 .forecast-date {
-  min-height: 42px;
+  display: grid;
+  gap: 6px;
+  min-height: 60px;
   color: var(--green-800);
   font-weight: 800;
   font-size: 0.92rem;
+}
+
+.day-label {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 3px 8px;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-size: 0.76rem;
+}
+
+.day-label.caution {
+  background: #f8e9d8;
+  color: #8b4a1f;
+}
+
+.day-label.watch {
+  background: #edf0d6;
+  color: #697329;
+}
+
+.day-label.good {
+  background: #e4f2d9;
+  color: var(--green-800);
 }
 
 .forecast-icon {
@@ -455,6 +513,12 @@ select {
   margin: 4px 0 0;
   color: #52624e;
   font-size: 0.9rem;
+}
+
+.forecast-task {
+  border-top: 1px solid rgba(79, 119, 45, 0.12);
+  padding-top: 10px;
+  font-weight: 800;
 }
 
 .forecast-advice {
@@ -515,6 +579,20 @@ code {
     padding: 20px;
   }
 
+  h1 {
+    font-size: 2.35rem;
+    line-height: 1.02;
+  }
+
+  .daily-summary strong {
+    font-size: 1.35rem;
+  }
+
+  .daily-summary p,
+  .hero-text {
+    font-size: 1rem;
+  }
+
   .weather-card {
     align-items: flex-start;
     flex-direction: column;
@@ -534,5 +612,13 @@ code {
 
   .forecast-grid {
     grid-template-columns: repeat(7, minmax(210px, 1fr));
+  }
+
+  .summary-item {
+    display: grid;
+  }
+
+  .summary-item span {
+    text-align: left;
   }
 }
